@@ -14,7 +14,7 @@ const projectsData: Project[] = [
     description: 'Aplicación web orientada al seguimiento de salud personal, integrando datos de calorías, ciclo menstrual y recordatorios de medicamentos.',
     imageUrl: 'https://placehold.co/600x400.png',
     imageHint: 'health tracking app',
-    technologies: ['React', 'Node.js', 'SQL', 'JavaScript', 'HTML/CSS'],
+    technologies: ['React', 'Node.js', 'SQL', 'JavaScript', 'HTML/CSS', 'AI'],
     liveDemoUrl: '#', // Replace with actual URL if available
     repoUrl: '#',     // Replace with actual URL if available
   },
