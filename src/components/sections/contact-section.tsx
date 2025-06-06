@@ -62,7 +62,7 @@ export default function ContactSection() {
           </p>
           <div className="flex items-center space-x-3 text-foreground/90">
             <Mail className="h-5 w-5 text-accent" />
-            <span>alisha.ibarra.bello@example.com</span>
+            <span>ibarrabelloalisha@gmail.com</span>
           </div>
           <p className="text-foreground/80 leading-relaxed mt-4">
             I'm always open to discussing new opportunities and collaborations. Let's create something amazing together!
