@@ -4,12 +4,12 @@ import { Button } from '@/components/ui/button';
 const socialLinks = [
   {
     name: 'GitHub',
-    url: 'https://github.com/alishaibarrabello', // Replace with actual URL
+    url: 'https://github.com/AleIb12', // Replace with actual URL
     icon: Github,
   },
   {
     name: 'LinkedIn',
-    url: 'https://linkedin.com/in/alishaibarrabello', // Replace with actual URL
+    url: 'https://www.linkedin.com/in/alisha-ibarra-bello-4526561b6', // Replace with actual URL
     icon: Linkedin,
   },
   {
