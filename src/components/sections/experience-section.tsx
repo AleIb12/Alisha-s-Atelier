@@ -1,54 +1,62 @@
+import * as React from 'react';
 import SectionWrapper from '@/components/common/section-wrapper';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import Image from 'next/image';
-import { Briefcase, CalendarDays, Cat } from 'lucide-react';
+import { Briefcase, CalendarDays, Cat, Brain, Building, Bot } from 'lucide-react';
 import type { ExperienceItem } from '@/types';
 
 const experienceData: ExperienceItem[] = [
   {
     id: '1',
-    title: 'Lead Web Developer',
-    company: 'Innovatech Solutions',
-    dateRange: 'Jan 2022 - Present',
+    title: 'Desarrolladora de Software',
+    company: 'Omkrom',
+    location: 'Madrid',
+    dateRange: 'Mayo 2025 – Actualidad',
     logoUrl: 'https://placehold.co/50x50.png',
     logoHint: 'tech company logo',
     descriptionPoints: [
-      'Led a team of 5 developers in creating responsive and user-friendly web applications using JavaScript, HTML, CSS, and React.',
-      'Architected and implemented scalable front-end solutions, improving performance by 20%.',
-      'Managed SQL databases, ensuring data integrity and optimizing query performance.',
-      'Collaborated with UX/UI designers to translate mockups into functional, pixel-perfect interfaces.',
+      'Desarrollo y mantenimiento de aplicaciones de software.',
+      'Colaboración en el diseño de arquitectura de software.',
+      'Participación en metodologías ágiles y sprints de desarrollo.',
+      'Resolución de problemas técnicos y optimización de rendimiento.',
     ],
-    skills: ['JavaScript', 'React', 'HTML5', 'CSS3', 'SQL', 'Agile', 'Team Leadership'],
+    skills: ['Desarrollo de Software', 'Arquitectura de Software', 'Metodologías Ágiles', 'Resolución de Problemas'],
+    icon: <Brain />,
   },
   {
     id: '2',
-    title: 'Junior Software Engineer',
-    company: 'Creative Spark Agency',
-    dateRange: 'Jun 2020 - Dec 2021',
+    title: 'Desarrolladora de Software',
+    company: 'MyCityHome',
+    location: 'Madrid',
+    dateRange: 'Marzo 2025 – Mayo 2025',
     logoUrl: 'https://placehold.co/50x50.png',
-    logoHint: 'creative agency logo',
+    logoHint: 'real estate tech logo',
     descriptionPoints: [
-      'Developed and maintained client websites using HTML, CSS, and JavaScript.',
-      'Assisted senior developers in building features for larger web applications.',
-      'Contributed to database design and management tasks using SQL.',
-      'Participated in code reviews and agile development processes.',
+      'Implementación de nuevas funcionalidades en la plataforma existente.',
+      'Corrección de errores y mejora de la experiencia de usuario.',
+      'Trabajo con bases de datos para la gestión de información.',
+      'Integración de APIs de terceros.',
     ],
-    skills: ['HTML', 'CSS', 'JavaScript', 'SQL', 'WordPress', 'Team Collaboration'],
+    skills: ['Desarrollo Web', 'Frontend', 'Backend', 'Bases de Datos', 'APIs'],
+    icon: <Building />,
   },
   {
     id: '3',
-    title: 'Web Development Intern',
-    company: 'TechStart Inc.',
-    dateRange: 'Jan 2020 - May 2020',
+    title: 'Profesora de Robótica',
+    company: 'Corazonistas Madrid',
+    location: 'Madrid',
+    dateRange: 'Noviembre 2024 – Marzo 2025',
     logoUrl: 'https://placehold.co/50x50.png',
-    logoHint: 'startup logo',
+    logoHint: 'school logo',
     descriptionPoints: [
-      'Gained hands-on experience with web development fundamentals including HTML, CSS, and basic JavaScript.',
-      'Supported the development team with website updates and bug fixes.',
-      'Learned about version control systems like Git and project management tools.',
+      'Impartición de clases de robótica a estudiantes.',
+      'Desarrollo de material didáctico y proyectos prácticos.',
+      'Fomento del pensamiento lógico y la resolución de problemas.',
+      'Organización de actividades y competiciones de robótica.',
     ],
-    skills: ['HTML', 'CSS', 'JavaScript Basics', 'Git'],
+    skills: ['Robótica Educativa', 'Enseñanza', 'STEM', 'Didáctica', 'Lego Mindstorms'],
+    icon: <Bot />,
   },
 ];
 
@@ -66,10 +74,14 @@ export default function ExperienceSection() {
             
             {/* Icon side (for larger screens) */}
             <div className="hidden md:flex md:w-1/2 px-6 items-center justify-center">
-              {index % 2 === 0 ? (
-                <Cat className="w-16 h-16 text-accent/70 opacity-50 transform -scale-x-100" />
+              {item.icon ? (
+                React.cloneElement(item.icon, { className: `w-16 h-16 opacity-50 ${index % 2 !== 0 ? 'text-primary/70' : 'text-accent/70'} ${index % 2 === 0 ? 'transform -scale-x-100' : ''}` })
               ) : (
-                <Briefcase className="w-16 h-16 text-primary/70 opacity-50" />
+                 index % 2 === 0 ? (
+                  <Cat className="w-16 h-16 text-accent/70 opacity-50 transform -scale-x-100" />
+                ) : (
+                  <Briefcase className="w-16 h-16 text-primary/70 opacity-50" />
+                )
               )}
             </div>
 
@@ -83,7 +95,7 @@ export default function ExperienceSection() {
                     )}
                     <div>
                       <CardTitle className="text-2xl font-headline text-primary">{item.title}</CardTitle>
-                      <p className="text-accent font-semibold text-lg">{item.company}</p>
+                      <p className="text-accent font-semibold text-lg">{item.company} - {item.location}</p>
                     </div>
                   </div>
                   <div className="flex items-center text-sm text-muted-foreground mt-2">

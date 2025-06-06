@@ -18,4 +18,6 @@ export interface ExperienceItem {
   logoUrl?: string;
   logoHint?: string;
   skills?: string[];
+  icon?: React.ReactElement;
 }
+
