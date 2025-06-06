@@ -55,7 +55,7 @@ const experienceData: ExperienceItem[] = [
       'Fomento del pensamiento lógico y la resolución de problemas.',
       'Organización de actividades y competiciones de robótica.',
     ],
-    skills: ['Robótica Educativa', 'Enseñanza', 'STEM', 'Didáctica', 'Lego Mindstorms'],
+    skills: ['Robótica Educativa', 'Enseñanza', 'STEM', 'Kodu', 'MakeCode Arcade', 'Scratch'],
     icon: <Bot />,
   },
 ];
