@@ -10,8 +10,8 @@ import type { Project } from '@/types';
 const projectsData: Project[] = [
   {
     id: '1',
-    title: 'Salud Móvil',
-    description: 'Aplicación web orientada al seguimiento de salud personal, integrando datos de calorías, ciclo menstrual y recordatorios de medicamentos.',
+    title: 'Health Mobile',
+    description: 'Web application focused on personal health tracking, integrating calorie data, menstrual cycle monitoring, and medication reminders.',
     imageUrl: '/images/projects/SaludMovil.jpeg',
     imageHint: 'health tracking app',
     technologies: ['React', 'Node.js', 'SQL', 'JavaScript', 'HTML/CSS', 'AI'],
@@ -20,8 +20,8 @@ const projectsData: Project[] = [
   },
   {
     id: '2',
-    title: 'Proyecto Pokémon',
-    description: 'Pokedex interactiva desarrollada con React y consumo de APIs, con interfaz intuitiva y búsqueda avanzada de Pokémon.',
+    title: 'Pokémon Project',
+    description: 'Interactive Pokedex developed with React and API consumption, featuring an intuitive interface and advanced Pokémon search functionality.',
     imageUrl: '/images/projects/Pokemon.jpeg',
     imageHint: 'pokemon pokedex app',
     technologies: ['React', 'JavaScript', 'API', 'HTML/CSS'],
@@ -30,8 +30,8 @@ const projectsData: Project[] = [
   },
   {
     id: '3',
-    title: 'Simulador de Piano',
-    description: 'Proyecto interactivo de piano virtual que permite a los usuarios tocar notas y practicar en línea con diseño responsivo.',
+    title: 'Piano Simulator',
+    description: 'Interactive virtual piano project that allows users to play notes and practice online with responsive design.',
     imageUrl: '/images/projects/Piano.jpeg',
     imageHint: 'piano simulator app',
     technologies: ['JavaScript', 'HTML', 'CSS', 'Web Audio API'],
