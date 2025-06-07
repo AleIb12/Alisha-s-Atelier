@@ -12,31 +12,31 @@ const projectsData: Project[] = [
     id: '1',
     title: 'Salud Móvil',
     description: 'Aplicación web orientada al seguimiento de salud personal, integrando datos de calorías, ciclo menstrual y recordatorios de medicamentos.',
-    imageUrl: 'https://placehold.co/600x400.png',
+    imageUrl: '/images/projects/SaludMovil.jpeg',
     imageHint: 'health tracking app',
     technologies: ['React', 'Node.js', 'SQL', 'JavaScript', 'HTML/CSS', 'AI'],
-    liveDemoUrl: '#', // Replace with actual URL if available
-    repoUrl: '#',     // Replace with actual URL if available
+    liveDemoUrl: 'https://salud-movil.vercel.app/',
+    repoUrl: undefined, // Private repository
   },
   {
     id: '2',
     title: 'Proyecto Pokémon',
     description: 'Pokedex interactiva desarrollada con React y consumo de APIs, con interfaz intuitiva y búsqueda avanzada de Pokémon.',
-    imageUrl: 'https://placehold.co/600x400.png',
+    imageUrl: '/images/projects/Pokemon.jpeg',
     imageHint: 'pokemon pokedex app',
     technologies: ['React', 'JavaScript', 'API', 'HTML/CSS'],
-    liveDemoUrl: '#', // Replace with actual URL if available
-    repoUrl: '#',     // Replace with actual URL if available
+    liveDemoUrl: 'https://projecto-pokemon.vercel.app',
+    repoUrl: 'https://github.com/AleIb12/projecto-pokemon',
   },
   {
     id: '3',
     title: 'Simulador de Piano',
     description: 'Proyecto interactivo de piano virtual que permite a los usuarios tocar notas y practicar en línea con diseño responsivo.',
-    imageUrl: 'https://placehold.co/600x400.png',
+    imageUrl: '/images/projects/Piano.jpeg',
     imageHint: 'piano simulator app',
     technologies: ['JavaScript', 'HTML', 'CSS', 'Web Audio API'],
-    liveDemoUrl: '#', // Replace with actual URL if available
-    repoUrl: '#',     // Replace with actual URL if available
+    liveDemoUrl: 'https://piano-six-kappa.vercel.app',
+    repoUrl: 'https://github.com/AleIb12/piano',
   },
 ];
 

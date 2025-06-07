@@ -10,7 +10,7 @@ export default function ProfileSection() {
       <div className="flex flex-col md:flex-row items-center gap-10 md:gap-16">
         <div className="relative group w-64 h-64 md:w-80 md:h-80 flex-shrink-0">
           <Image
-            src="https://placehold.co/400x400.png"
+            src="/images/profile/avatar.png"
             alt="Alisha Ibarra Bello"
             width={400}
             height={400}
@@ -38,7 +38,7 @@ export default function ProfileSection() {
               <Link href="#contact">Get in Touch</Link>
             </Button>
             <Button variant="outline" size="lg" asChild className="border-accent text-accent hover:bg-accent/10 hover:text-accent-foreground rounded-lg shadow-md hover:shadow-lg transition-all duration-300 transform hover:scale-105">
-              <a href="/alisha-ibarra-bello-resume.pdf" download>
+              <a href="/documents/cv/alisha-ibarra-cv.pdf" download>
                 <Download className="mr-2 h-5 w-5" />
                 Download CV
               </a>

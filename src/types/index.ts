@@ -13,6 +13,7 @@ export interface ExperienceItem {
   id:string;
   title: string;
   company: string;
+  location?: string;
   dateRange: string;
   descriptionPoints: string[];
   logoUrl?: string;

@@ -13,7 +13,7 @@ const experienceData: ExperienceItem[] = [
     company: 'Omkrom',
     location: 'Madrid',
     dateRange: 'Mayo 2025 – Actualidad',
-    logoUrl: 'https://placehold.co/50x50.png',
+    logoUrl: '/images/portfolio/logo omkrom.jpeg',
     logoHint: 'tech company logo',
     descriptionPoints: [
       'Desarrollo y mantenimiento de aplicaciones de software.',
@@ -30,7 +30,7 @@ const experienceData: ExperienceItem[] = [
     company: 'MyCityHome',
     location: 'Madrid',
     dateRange: 'Marzo 2025 – Mayo 2025',
-    logoUrl: 'https://placehold.co/50x50.png',
+    logoUrl: '/images/portfolio/logo my city home.jpeg',
     logoHint: 'real estate tech logo',
     descriptionPoints: [
       'Implementación de nuevas funcionalidades en la plataforma existente.',
@@ -47,7 +47,7 @@ const experienceData: ExperienceItem[] = [
     company: 'Corazonistas Madrid',
     location: 'Madrid',
     dateRange: 'Noviembre 2024 – Marzo 2025',
-    logoUrl: 'https://placehold.co/50x50.png',
+    logoUrl: '/images/portfolio/logo corazonistas.jpeg',
     logoHint: 'school logo',
     descriptionPoints: [
       'Impartición de clases de robótica a estudiantes.',

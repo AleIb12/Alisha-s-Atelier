@@ -19,12 +19,12 @@ const socialLinks = [
   },
   {
     name: 'Twitter',
-    url: 'https://twitter.com/alishaibarrabello', // Replace with actual URL
+    url: 'https://x.com/Kawai_lisha',
     icon: Twitter,
   },
   {
     name: 'Instagram',
-    url: 'https://instagram.com/ali.ibarrabello', // Updated Instagram URL
+    url: 'https://www.instagram.com/ali.ibarrabello/',
     icon: Instagram,
   }
 ];
