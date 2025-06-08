@@ -5,6 +5,14 @@ import { Toaster } from "@/components/ui/toaster";
 export const metadata: Metadata = {
   title: "Alisha's Atelier - Portfolio",
   description: "Alisha Ibarra Bello's personal portfolio showcasing projects and experience.",
+  icons: {
+    icon: [
+      { url: '/favicon.svg', type: 'image/svg+xml' },
+      { url: '/favicon.ico', type: 'image/x-icon', sizes: '32x32' }
+    ],
+    shortcut: '/favicon.ico',
+    apple: '/favicon.svg',
+  },
 };
 
 export default function RootLayout({
