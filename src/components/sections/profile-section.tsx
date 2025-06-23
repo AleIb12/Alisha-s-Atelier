@@ -38,7 +38,7 @@ export default function ProfileSection() {
               <Link href="#contact">Get in Touch</Link>
             </Button>
             <Button variant="outline" size="lg" asChild className="border-accent text-accent hover:bg-accent/10 hover:text-accent-foreground rounded-lg shadow-md hover:shadow-lg transition-all duration-300 transform hover:scale-105">
-              <a href="/documents/cv/alisha-ibarra-cv.pdf" download>
+              <a href="/documents/cv/cv2.pdf" download>
                 <Download className="mr-2 h-5 w-5" />
                 Download CV
               </a>
