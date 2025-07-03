@@ -10,7 +10,7 @@ export default function ProfileSection() {
       <div className="flex flex-col md:flex-row items-center gap-10 md:gap-16">
         <div className="relative group w-64 h-64 md:w-80 md:h-80 flex-shrink-0">
           <Image
-            src="/images/profile/avatar.png"
+            src="/images/profile/imagenpro.png"
             alt="Alisha Ibarra Bello"
             width={400}
             height={400}
