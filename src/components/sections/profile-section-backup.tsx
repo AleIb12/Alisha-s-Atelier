@@ -73,14 +73,14 @@ export default function ProfileSection() {
             <div className="relative p-6 bg-white/70 dark:bg-gray-900/70 backdrop-blur-xl rounded-2xl border border-purple-200/50 dark:border-purple-800/50 shadow-xl">
               <div className="absolute inset-0 bg-gradient-to-r from-purple-400/5 via-pink-400/5 to-blue-400/5 rounded-2xl"></div>
               <p className="relative text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
-                Hello! I&apos;m Alisha, a passionate developer with a love for crafting beautiful and functional web experiences.
+                Hello! I'm Alisha, a passionate developer with a love for crafting beautiful and functional web experiences.
                 I specialize in <span className="font-semibold text-purple-600 dark:text-purple-400">JavaScript</span>, <span className="font-semibold text-pink-600 dark:text-pink-400">HTML</span>, <span className="font-semibold text-blue-600 dark:text-blue-400">CSS</span>, and <span className="font-semibold text-purple-600 dark:text-purple-400">SQL</span>, and enjoy bringing ideas to life through code.
               </p>
             </div>
             
             <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
               My approach blends technical skill with a creative eye, aiming to build software that is not only robust but also delightful to use.
-              When I&apos;m not coding, you can find me exploring new design trends, learning new technologies, or enjoying a good cup of tea. ✨
+              When I'm not coding, you can find me exploring new design trends, learning new technologies, or enjoying a good cup of tea. ✨
             </p>
           </div>
           
@@ -101,6 +101,25 @@ export default function ProfileSection() {
                   <Download className="h-5 w-5 group-hover:animate-bounce" />
                   <span>Download CV</span>
                 </span>
+              </a>
+            </Button>
+          </div>
+        </div>
+      </div>
+    </SectionWrapper>
+            My approach blends technical skill with a creative eye, aiming to build software that is not only robust but also delightful to use.
+          </p>
+          <p className="text-lg text-foreground/80 leading-relaxed mb-8">
+            When I'm not coding, you can find me exploring new design trends, learning new technologies, or enjoying a good cup of tea.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+            <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-lg shadow-md hover:shadow-lg transition-all duration-300 transform hover:scale-105">
+              <Link href="#contact">Get in Touch</Link>
+            </Button>
+            <Button variant="outline" size="lg" asChild className="border-accent text-accent hover:bg-accent/10 hover:text-accent-foreground rounded-lg shadow-md hover:shadow-lg transition-all duration-300 transform hover:scale-105">
+              <a href="/documents/cv/cv2.pdf" download>
+                <Download className="mr-2 h-5 w-5" />
+                Download CV
               </a>
             </Button>
           </div>
