@@ -43,6 +43,7 @@ Un portfolio moderno y aesthetic desarrollado con Next.js, TypeScript y Tailwind
 - **Iconos Temáticos**: Code, Rabbit, Sparkles y Heart flotando alrededor del avatar
 - **Typography Gradient**: Nombre con gradiente púrpura-rosa-azul animado
 - **Cards Glassmorphism**: Información personal en tarjetas con efecto cristal
+- **Stack Tecnológico**: JavaScript, HTML, CSS, SQL, Java, Python, Swift, NoSQL
 - **Botones Interactivos**: Efectos hover con escalado y cambio de gradiente
 - **Descarga de CV**: Botón con animaciones y iconos que rebotan
 
@@ -115,6 +116,7 @@ Proyectos destacados con demos en vivo y código fuente:
 - **Tailwind Custom**: Configuración aesthetic con colores pastel y gradientes
 - **CSS Custom Animations**: Keyframes personalizados para efectos aesthetic
 - **Responsive Design**: Mobile-first con breakpoints optimizados
+- **Color Coding**: Sistema de colores para tecnologías (JavaScript=púrpura, Python=verde, Swift=naranja, etc.)
 
 ### UI Components & Icons
 - **Shadcn/ui**: Sistema de componentes con Radix UI primitives
@@ -146,6 +148,37 @@ Proyectos destacados con demos en vivo y código fuente:
 - **Edge Functions**: Funciones serverless en el edge
 - **Domain Custom**: Dominio personalizado con SSL automático
 - **Analytics**: Métricas de rendimiento y uso integradas
+
+## 🎨 Paleta de Colores y Tecnologías
+
+### 🌈 **Esquema de Colores por Tecnología**
+El portfolio utiliza un sistema de color-coding para las diferentes tecnologías mencionadas:
+
+```css
+/* Colores para Tecnologías en Profile Section */
+JavaScript → Púrpura (#8b5cf6) - Lenguaje principal frontend
+HTML       → Rosa (#ec4899)    - Markup y estructura  
+CSS        → Azul (#3b82f6)    - Styling y diseño
+SQL        → Púrpura (#8b5cf6) - Bases de datos relacionales
+Java       → Índigo (#6366f1)  - Programación backend
+Python     → Verde (#10b981)   - Scripting y desarrollo
+Swift      → Naranja (#f97316) - Desarrollo iOS/macOS
+NoSQL      → Rosa (#ec4899)     - Bases de datos no relacionales
+```
+
+### 🎭 **Gradientes Principales**
+```css
+--gradient-primary: Púrpura (#a855f7) → Rosa (#ec4899) → Azul (#3b82f6)
+--gradient-secondary: Índigo (#6366f1) → Púrpura (#8b5cf6) → Rosa (#f472b6)
+--gradient-accent: Rosa (#f472b6) → Azul (#3b82f6) → Índigo (#6366f1)
+```
+
+### 🌸 **Paleta Base**
+- **Background**: `#F5F3FF` (Very light off-white con toque lavanda)
+- **Primary**: `#D8B4FE` (Soft Lavender)
+- **Accent**: `#F8BBD0` (Pale Rose)
+- **Cards**: Transparencias con backdrop-blur para glassmorphism
+- **Hovers**: Saturación incrementada y efectos de elevación
 
 ## 🔗 Enlaces Sociales
 
@@ -280,11 +313,12 @@ Alisha-s-Atelier/
 ### 📝 Información Personal
 **Ubicación**: `src/components/sections/profile-section.tsx`
 ```tsx
-// Personalizar información básica
+// Personalizar información básica y stack tecnológico
 const personalInfo = {
   name: "Alisha Ibarra Bello",
   title: "Full-Stack Developer & Creative Coder", 
   description: "Hello! I'm Alisha, a passionate developer...",
+  technologies: ["JavaScript", "HTML", "CSS", "SQL", "Java", "Python", "Swift", "NoSQL"],
   cvPath: "/documents/cv/cv2.pdf",
   profileImage: "/images/profile/imagenpro.png"
 }
@@ -326,7 +360,7 @@ const projectsData = [
 ### 📱 Enlaces de Contacto
 **Ubicación**: `src/components/sections/contact-section.tsx`
 ```tsx
-// Actualizar métodos de contacto
+// Actualizar métodos de contacto (3 opciones disponibles)
 const contactCards = [
   {
     title: "Email Me",
@@ -434,6 +468,8 @@ Este portfolio es un ejemplo de cómo crear experiencias web aesthetic y funcion
 
 *"Code is poetry, design is music, and together they create magic"* 🎭✨
 
-**Portfolio Version**: 2.0 Aesthetic ✨  
+**Portfolio Version**: 2.1 Aesthetic ✨  
 **Última actualización**: Julio 2025  
+**Stack actualizado**: JavaScript, HTML, CSS, SQL, Java, Python, Swift, NoSQL  
+**Métodos de contacto**: Email, WhatsApp, Telegram (streamlined)  
 **Estado**: Activamente mantenido y con amor 💖
