@@ -206,8 +206,6 @@ Firebase   → Naranja (#f97316) - Backend como servicio
 
 - **GitHub**: [github.com/AleIb12](https://github.com/AleIb12)
 - **LinkedIn**: [linkedin.com/in/alisha-ibarra-bello-4526561b6](https://www.linkedin.com/in/alisha-ibarra-bello-4526561b6)
-- **Instagram**: [instagram.com/ali.ibarrabello](https://www.instagram.com/ali.ibarrabello/)
-- **Twitter/X**: [x.com/Kawai_lisha](https://x.com/Kawai_lisha)
 
 ## 🚀 Instalación y Desarrollo
 

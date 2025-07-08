@@ -1,4 +1,4 @@
-import { Github, Linkedin, Twitter, Instagram, Briefcase } from 'lucide-react';
+import { Github, Linkedin, Briefcase } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const socialLinks = [
@@ -16,16 +16,6 @@ const socialLinks = [
     name: 'Portfolio', // Example professional network
     url: '#', // Replace with actual URL
     icon: Briefcase,
-  },
-  {
-    name: 'Twitter',
-    url: 'https://x.com/Kawai_lisha',
-    icon: Twitter,
-  },
-  {
-    name: 'Instagram',
-    url: 'https://www.instagram.com/ali.ibarrabello/',
-    icon: Instagram,
   }
 ];
 
