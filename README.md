@@ -56,6 +56,23 @@ Un portfolio moderno y aesthetic desarrollado con Next.js, TypeScript y Tailwind
 - **Stats Cards**: Métricas con "1 Year Experience", "3 Professional Roles", "15+ Technologies"
 - **Skills Badges**: Tecnologías con gradientes de colores rotativos
 
+#### 🏢 Experiencias Profesionales Destacadas:
+
+**Omkrom (Mayo 2025 - Presente)** - Software Developer
+- **Stack**: Swift, Angular, TypeScript, CSS, SQL
+- **Enfoque**: Desarrollo de aplicaciones, arquitectura de software, metodologías ágiles
+- **Status**: 🟢 Posición actual
+
+**MyCityHome (Marzo 2025 - Mayo 2025)** - Software Developer  
+- **Stack**: React, TypeScript, Python, Java, CSS, PostgreSQL, Firebase
+- **Enfoque**: Desarrollo full-stack, gestión de bases de datos, integración de APIs
+- **Status**: ✨ Proyecto completado
+
+**Corazonistas Madrid (Noviembre 2024 - Marzo 2025)** - Robotics Teacher
+- **Stack**: Kodu, MakeCode Arcade, Scratch, Educational Robotics
+- **Enfoque**: Enseñanza STEM, desarrollo de materiales educativos
+- **Status**: ✨ Proyecto completado
+
 ### 🎯 My Creations (Projects Section)
 - **Project Cards Premium**: Tarjetas con efectos 3D, sombras profundas y hover animations
 - **Numbering System**: Badges numerados (01, 02, 03) con gradientes
@@ -69,7 +86,7 @@ Proyectos destacados con demos en vivo y código fuente:
 1. **Salud Móvil** 🏥
    - Aplicación de seguimiento de salud personal
    - **Demo**: [salud-movil.vercel.app](https://salud-movil.vercel.app/)
-   - **Tech**: React, Node.js, SQL, JavaScript, HTML/CSS, AI
+   - **Tech**: React, Node.js, SQL, NoSQL, JavaScript, HTML/CSS, AI
    - *Repositorio privado*
 
 2. **Proyecto Pokémon** 🎮
@@ -82,7 +99,7 @@ Proyectos destacados con demos en vivo y código fuente:
    - Piano virtual interactivo
    - **Demo**: [piano-six-kappa.vercel.app](https://piano-six-kappa.vercel.app)
    - **Repo**: [github.com/AleIb12/piano](https://github.com/AleIb12/piano)
-   - **Tech**: JavaScript, HTML, CSS, Web Audio API
+   - **Tech**: React, JavaScript, HTML, CSS, Web Audio API
 
 ### 📞 Let's Connect (Contact Section)
 - **Diseño Glassmorphism**: Fondo con gradiente pastel y elementos flotantes
@@ -164,6 +181,11 @@ Java       → Índigo (#6366f1)  - Programación backend
 Python     → Verde (#10b981)   - Scripting y desarrollo
 Swift      → Naranja (#f97316) - Desarrollo iOS/macOS
 NoSQL      → Rosa (#ec4899)     - Bases de datos no relacionales
+TypeScript → Azul (#3b82f6)    - JavaScript con tipos
+React      → Cyan (#06b6d4)    - Framework frontend
+Angular    → Rojo (#ef4444)    - Framework frontend
+PostgreSQL → Azul (#3b82f6)    - Base de datos relacional
+Firebase   → Naranja (#f97316) - Backend como servicio
 ```
 
 ### 🎭 **Gradientes Principales**
@@ -333,7 +355,14 @@ const experienceData = [
     title: "Software Developer",
     company: "Omkrom", 
     dateRange: "May 2025 – Present",
-    skills: ["Software Development", "Architecture", "Agile"],
+    skills: ["Swift", "Angular", "TypeScript", "CSS", "SQL", "Software Development", "Software Architecture", "Agile Methodologies"],
+    // ... resto de configuración
+  },
+  {
+    title: "Software Developer",
+    company: "MyCityHome",
+    dateRange: "March 2025 – May 2025", 
+    skills: ["React", "TypeScript", "Python", "Java", "CSS", "PostgreSQL", "Firebase", "Web Development", "Frontend", "Backend", "Databases", "APIs"],
     // ... resto de configuración
   }
   // Agregar nuevas experiencias aquí

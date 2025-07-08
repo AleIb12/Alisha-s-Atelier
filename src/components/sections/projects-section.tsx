@@ -14,7 +14,7 @@ const projectsData: Project[] = [
     description: 'Web application focused on personal health tracking, integrating calorie data, menstrual cycle monitoring, and medication reminders.',
     imageUrl: '/images/projects/SaludMovil.jpeg',
     imageHint: 'health tracking app',
-    technologies: ['React', 'Node.js', 'SQL', 'JavaScript', 'HTML/CSS', 'AI'],
+    technologies: ['React', 'Node.js', 'SQL', 'NoSQL', 'JavaScript', 'HTML/CSS', 'AI'],
     liveDemoUrl: 'https://salud-movil.vercel.app/',
     repoUrl: undefined, // Private repository
   },
@@ -34,7 +34,7 @@ const projectsData: Project[] = [
     description: 'Interactive virtual piano project that allows users to play notes and practice online with responsive design.',
     imageUrl: '/images/projects/Piano.jpeg',
     imageHint: 'piano simulator app',
-    technologies: ['JavaScript', 'HTML', 'CSS', 'Web Audio API'],
+    technologies: ['React', 'JavaScript', 'HTML', 'CSS', 'Web Audio API'],
     liveDemoUrl: 'https://piano-six-kappa.vercel.app',
     repoUrl: 'https://github.com/AleIb12/piano',
   },

@@ -21,7 +21,7 @@ const experienceData: ExperienceItem[] = [
       'Participate in agile methodologies and development sprints.',
       'Solve technical problems and optimize performance.',
     ],
-    skills: ['Software Development', 'Software Architecture', 'Agile Methodologies', 'Problem Solving'],
+    skills: ['Swift', 'Angular', 'TypeScript', 'CSS', 'SQL', 'Software Development', 'Software Architecture', 'Agile Methodologies'],
     icon: <Brain />,
   },
   {
@@ -38,7 +38,7 @@ const experienceData: ExperienceItem[] = [
       'Work with databases for information management.',
       'Third-party API integration.',
     ],
-    skills: ['Web Development', 'Frontend', 'Backend', 'Databases', 'APIs'],
+    skills: ['React', 'TypeScript', 'Python', 'Java', 'CSS', 'PostgreSQL', 'Firebase', 'Web Development', 'Frontend', 'Backend', 'Databases', 'APIs'],
     icon: <Building />,
   },
   {
