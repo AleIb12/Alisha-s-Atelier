@@ -4,7 +4,7 @@
 import SectionWrapper from '@/components/common/section-wrapper';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { Mail, MessageCircle, Phone, Calendar, Coffee, ExternalLink, Rabbit, Copy, Send } from 'lucide-react';
+import { Mail, MessageCircle, Phone, Calendar, ExternalLink, Rabbit, Copy, Send } from 'lucide-react';
 import { useToast } from "@/hooks/use-toast";
 import SocialLinks from '@/components/common/social-links';
 
@@ -46,14 +46,6 @@ export default function ContactSection() {
       action: "Open Telegram",
       href: "https://t.me/Alisha_Ibarra",
       color: "bg-blue-400 hover:bg-blue-500"
-    },
-    {
-      title: "Buy me a Coffee",
-      description: "Support my work",
-      icon: <Coffee className="h-6 w-6" />,
-      action: "Buy Coffee",
-      href: "https://coff.ee/ali.ibarra",
-      color: "bg-yellow-500 hover:bg-yellow-600"
     }
   ];
 

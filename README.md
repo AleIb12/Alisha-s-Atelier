@@ -96,7 +96,6 @@ Proyectos destacados con demos en vivo y código fuente:
 - **📧 Email**: `ibarrabelloalisha@gmail.com` - Card azul con efecto de copia
 - **💬 WhatsApp**: `+34 692 616 005` - Card verde con link directo 
 - **📱 Telegram**: `@Alisha_Ibarra` - Card azul claro con chat instantáneo
-- **☕ Buy me a Coffee**: `ali.ibarra` - Card amarilla para donaciones
 
 ### ✨ Header & Footer Aesthetic
 - **Header Premium**: Logo con rabbit animado, gradientes en navegación y cat flotante
@@ -337,6 +336,10 @@ const contactCards = [
   {
     title: "WhatsApp", 
     href: "https://wa.me/TUNUMERO"
+  },
+  {
+    title: "Telegram",
+    href: "https://t.me/TU_USERNAME"
   }
   // Personalizar según preferencias
 ]
