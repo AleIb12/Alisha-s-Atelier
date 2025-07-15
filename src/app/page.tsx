@@ -1,13 +1,31 @@
+'use client';
+
+import { useState, useEffect } from 'react';
 import Header from '@/components/layout/header';
 import Footer from '@/components/layout/footer';
 import ProfileSection from '@/components/sections/profile-section';
 import ProjectsSection from '@/components/sections/projects-section';
 import ExperienceSection from '@/components/sections/experience-section';
 import ContactSection from '@/components/sections/contact-section';
+import LoadingScreen from '@/components/common/loading-screen';
 
 export default function HomePage() {
+  const [isLoading, setIsLoading] = useState(true);
+  const [showContent, setShowContent] = useState(false);
+
+  const handleLoadingComplete = () => {
+    setIsLoading(false);
+    // Pequeña pausa para suavizar la transición
+    setTimeout(() => {
+      setShowContent(true);
+    }, 200);
+  };
+
+  if (isLoading) {
+    return <LoadingScreen onLoadingComplete={handleLoadingComplete} />;
+  }
   return (
-    <div className="relative flex flex-col min-h-screen bg-gradient-to-br from-slate-50 via-purple-50/40 to-pink-50/40 dark:from-slate-950 dark:via-purple-950/40 dark:to-pink-950/40 text-foreground overflow-hidden">
+    <div className={`relative flex flex-col min-h-screen bg-gradient-to-br from-slate-50 via-purple-50/40 to-pink-50/40 dark:from-slate-950 dark:via-purple-950/40 dark:to-pink-950/40 text-foreground overflow-hidden transition-opacity duration-500 ${showContent ? 'opacity-100' : 'opacity-0'}`}>
       {/* Enhanced animated background elements */}
       <div className="fixed inset-0 overflow-hidden pointer-events-none">
         {/* Primary floating elements */}
