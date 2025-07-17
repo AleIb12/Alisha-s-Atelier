@@ -96,33 +96,29 @@ export default function ProfileSection() {
               </Link>
             </Button>
             <Button variant="outline" size="lg" asChild className="relative overflow-hidden border-2 border-purple-200 hover:border-purple-300 dark:border-purple-800 dark:hover:border-purple-700 text-purple-700 dark:text-purple-300 hover:bg-purple-50 dark:hover:bg-purple-900/20 font-semibold px-8 py-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 group">
-              <a href="/documents/cv/cv2.pdf" download>
-                <span className="flex items-center space-x-2">
+                            <a href="/documents/cv/CurriculumAlisha.pdf" download>
+                <div className="flex items-center space-x-2">
                   <Download className="h-5 w-5 group-hover:animate-bounce" />
-                  <span>Download CV</span>
-                </span>
+                  <span className="font-medium">Descargar CV</span>
+                </div>
               </a>
             </Button>
           </div>
         </div>
-      </div>
-    </SectionWrapper>
-            My approach blends technical skill with a creative eye, aiming to build software that is not only robust but also delightful to use.
-          </p>
-          <p className="text-lg text-foreground/80 leading-relaxed mb-8">
-            When I'm not coding, you can find me exploring new design trends, learning new technologies, or enjoying a good cup of tea.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-            <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-lg shadow-md hover:shadow-lg transition-all duration-300 transform hover:scale-105">
-              <Link href="#contact">Get in Touch</Link>
-            </Button>
-            <Button variant="outline" size="lg" asChild className="border-accent text-accent hover:bg-accent/10 hover:text-accent-foreground rounded-lg shadow-md hover:shadow-lg transition-all duration-300 transform hover:scale-105">
-              <a href="/documents/cv/cv2.pdf" download>
-                <Download className="mr-2 h-5 w-5" />
-                Download CV
-              </a>
-            </Button>
-          </div>
+
+        {/* Download CV Button for mobile */}
+        <div className="md:hidden">
+          <Button 
+            asChild 
+            className="w-full group relative overflow-hidden bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 border-0 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+          >
+            <a href="/documents/cv/CurriculumAlisha.pdf" download>
+              <div className="flex items-center space-x-2">
+                <Download className="h-5 w-5 group-hover:animate-bounce" />
+                <span className="font-medium">Descargar CV</span>
+              </div>
+            </a>
+          </Button>
         </div>
       </div>
     </SectionWrapper>

@@ -6,6 +6,7 @@ import Footer from '@/components/layout/footer';
 import ProfileSection from '@/components/sections/profile-section';
 import ProjectsSection from '@/components/sections/projects-section';
 import ExperienceSection from '@/components/sections/experience-section';
+import EducationSection from '@/components/sections/education-section';
 import ContactSection from '@/components/sections/contact-section';
 import LoadingScreen from '@/components/common/loading-screen';
 
@@ -63,6 +64,7 @@ export default function HomePage() {
           <ProfileSection />
           <ProjectsSection />
           <ExperienceSection />
+          <EducationSection />
           <ContactSection />
         </main>
         <Footer />

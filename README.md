@@ -1,7 +1,15 @@
 # Alis## ✨ Características Aesthetic
 
 - **✨ Diseño Glassmorphism**: Efectos de cristal con backdrop-blur y transparencias
-- **🎨 Gradientes Dinámicos**: Colores pastel con transiciones suaves (púrpura, rosa, azul)
+- **🎨 Gradientes ### 🎓 Academic Journey (Education Section)
+- **Timeline Educativo**: Línea de tiempo con gradiente azul-indigo-púrpura
+- **Niveles Formativos**: Grado Superior, Grado Medio, Educación Secundaria
+- **Cards Académicas**: Tarjetas con información detallada de cada etapa formativa
+- **Status Badges**: Indicadores por nivel educativo con colores distintivos
+- **Icons Temáticos**: GraduationCap, BookOpen, Award para cada nivel
+- **Stats Cards**: Métricas con "3 Niveles Educativos", "8 Años de Formación", "17 Tecnologías"
+- **Skills Badges**: Tecnologías y aptitudes aprendidas con gradientes azules
+- **Certificate Download**: Botón de descarga del certificado de Upgrade Hubs**: Colores pastel con transiciones suaves (púrpura, rosa, azul)
 - **🌟 Animaciones Fluidas**: Elementos flotantes, hover effects y micro-interacciones
 - **💫 Elementos In├── src/
 │   ├── app/
@@ -84,32 +92,6 @@ Un portfolio moderno y aesthetic desarrollado con Next.js, TypeScript y Tailwind
 - **Botones Interactivos**: Efectos hover con escalado y cambio de gradiente
 - **Descarga de CV**: Botón con animaciones y iconos que rebotan
 
-### 💼 My Journey (Experience Section)
-- **Timeline Aesthetic**: Línea de tiempo con gradiente indigo-púrpura-rosa
-- **Dots Animados**: Puntos del timeline con efectos ping y gradientes
-- **Cards Flotantes**: Tarjetas de experiencia con hover effects y transformaciones 3D
-- **Status Badges**: Indicadores "Current" y "Completed" con colores dinámicos
-- **Icons Temáticos**: Brain (Omkrom), Building (MyCityHome), Bot (Corazonistas)
-- **Stats Cards**: Métricas con "1 Year Experience", "3 Professional Roles", "15+ Technologies"
-- **Skills Badges**: Tecnologías con gradientes de colores rotativos
-
-#### 🏢 Experiencias Profesionales Destacadas:
-
-**Omkrom (Mayo 2025 - Presente)** - Software Developer
-- **Stack**: Swift, Angular, TypeScript, CSS, SQL
-- **Enfoque**: Desarrollo de aplicaciones, arquitectura de software, metodologías ágiles
-- **Status**: 🟢 Posición actual
-
-**MyCityHome (Marzo 2025 - Mayo 2025)** - Software Developer  
-- **Stack**: React, TypeScript, Python, Java, CSS, PostgreSQL, Firebase
-- **Enfoque**: Desarrollo full-stack, gestión de bases de datos, integración de APIs
-- **Status**: ✨ Proyecto completado
-
-**Corazonistas Madrid (Noviembre 2024 - Marzo 2025)** - Robotics Teacher
-- **Stack**: Kodu, MakeCode Arcade, Scratch, Educational Robotics
-- **Enfoque**: Enseñanza STEM, desarrollo de materiales educativos
-- **Status**: ✨ Proyecto completado
-
 ### 🎯 My Creations (Projects Section)
 - **Project Cards Premium**: Tarjetas con efectos 3D, sombras profundas y hover animations
 - **Numbering System**: Badges numerados (01, 02, 03) con gradientes
@@ -137,6 +119,62 @@ Proyectos destacados con demos en vivo y código fuente:
    - **Demo**: [piano-six-kappa.vercel.app](https://piano-six-kappa.vercel.app)
    - **Repo**: [github.com/AleIb12/piano](https://github.com/AleIb12/piano)
    - **Tech**: React, JavaScript, HTML, CSS, Web Audio API
+
+### 💼 My Journey (Experience Section)
+- **Timeline Aesthetic**: Línea de tiempo con gradiente indigo-púrpura-rosa
+- **Dots Animados**: Puntos del timeline con efectos ping y gradientes
+- **Cards Flotantes**: Tarjetas de experiencia con hover effects y transformaciones 3D
+- **Status Badges**: Indicadores "Current" y "Completed" con colores dinámicos
+- **Icons Temáticos**: Brain (Omkrom), Building (MyCityHome), Bot (Corazonistas)
+- **Stats Cards**: Métricas con "1 Year Experience", "3 Professional Roles", "15+ Technologies"
+- **Skills Badges**: Tecnologías con gradientes de colores rotativos
+
+#### 🏢 Experiencias Profesionales Destacadas:
+
+**Omkrom (Mayo 2025 - Presente)** - Software Developer
+- **Stack**: Swift, Angular, TypeScript, CSS, SQL
+- **Enfoque**: Desarrollo de aplicaciones, arquitectura de software, metodologías ágiles
+- **Status**: 🟢 Posición actual
+
+**MyCityHome (Marzo 2025 - Mayo 2025)** - Software Developer  
+- **Stack**: React, TypeScript, Python, Java, CSS, PostgreSQL, Firebase
+- **Enfoque**: Desarrollo full-stack, gestión de bases de datos, integración de APIs
+- **Status**: ✨ Proyecto completado
+
+**Corazonistas Madrid (Noviembre 2024 - Marzo 2025)** - Robotics Teacher
+- **Stack**: Kodu, MakeCode Arcade, Scratch, Educational Robotics
+- **Enfoque**: Enseñanza STEM, desarrollo de materiales educativos
+- **Status**: ✨ Proyecto completado
+
+### � Academic Journey (Education Section)
+- **Timeline Educativo**: Línea de tiempo con gradiente azul-indigo-púrpura
+- **Niveles Formativos**: Grado Superior, Grado Medio, Educación Secundaria
+- **Cards Académicas**: Tarjetas con información detallada de cada etapa formativa
+- **Status Badges**: Indicadores por nivel educativo con colores distintivos
+- **Icons Temáticos**: GraduationCap, BookOpen, Award para cada nivel
+- **Stats Cards**: Métricas con "3 Niveles Educativos", "8 Años de Formación", "17 Tecnologías"
+- **Skills Badges**: Tecnologías y aptitudes aprendidas con gradientes azules
+
+#### 🎓 Formación Académica Destacada:
+
+**Upgrade Hub (Septiembre 2022 - Junio 2025)** - Ciclo Formativo Grado Superior
+- **Especialización**: Desarrollo de Aplicaciones Multiplataforma y Web
+- **Stack**: Java, Spring Framework, React.js, SQL, JavaScript, Figma, MongoDB, Odoo
+- **Aptitudes**: Comunicación, Compromiso, Gestión de redes, Desarrollo web
+- **Certificado**: Descarga disponible del certificado oficial
+- **Status**: 🎓 Grado Superior Completado
+
+**Colegio María Inmaculada Fuencarral (Septiembre 2020 - Junio 2022)** - Ciclo Formativo Grado Medio
+- **Especialización**: Sistemas Microinformáticos y Redes
+- **Stack**: Gestión de redes, Diseño de redes, Seguridad de redes, Redes inalámbricas
+- **Aptitudes**: Montaje de hardware informático, Administración de sistemas
+- **Status**: 📚 Grado Medio Completado
+
+**Colegio La Inmaculada (Septiembre 2017 - Junio 2020)** - Educación Secundaria
+- **Especialización**: Ciencias
+- **Stack**: Fundamentos científicos, Matemáticas, Física, Química, Tecnología
+- **Aptitudes**: Base científica y técnica
+- **Status**: 🏫 Educación Secundaria Completada
 
 ### 📞 Let's Connect (Contact Section)
 - **Diseño Glassmorphism**: Fondo con gradiente pastel y elementos flotantes
@@ -223,6 +261,10 @@ React      → Cyan (#06b6d4)    - Framework frontend
 Angular    → Rojo (#ef4444)    - Framework frontend
 PostgreSQL → Azul (#3b82f6)    - Base de datos relacional
 Firebase   → Naranja (#f97316) - Backend como servicio
+Spring Framework → Verde (#10b981) - Framework Java
+MongoDB    → Verde (#10b981)   - Base de datos NoSQL
+Figma      → Rosa (#ec4899)     - Diseño UI/UX
+Odoo       → Púrpura (#8b5cf6)  - ERP y CRM
 ```
 
 ### 🎭 **Gradientes Principales**
@@ -277,7 +319,7 @@ npm run lint         # Linting del código
 
 ```
 ├── public/
-│   ├── documents/cv/         # CV descargable (cv2.pdf)
+│   ├── documents/cv/         # CV descargable (CurriculumAlisha.pdf)
 │   ├── images/
 │   │   ├── portfolio/        # Logos de empresas
 │   │   ├── profile/          # Foto de perfil (imagenpro.png)
@@ -298,7 +340,8 @@ npm run lint         # Linting del código
 │   │   │   ├── contact-section.tsx    # Tarjetas de contacto
 │   │   │   ├── profile-section.tsx    # About + CV download
 │   │   │   ├── projects-section.tsx   # Mis proyectos
-│   │   │   └── experience-section.tsx # Mi experiencia
+│   │   │   ├── experience-section.tsx # Mi experiencia
+│   │   │   └── education-section.tsx  # Mi formación académica
 │   │   └── ui/               # UI Components (Shadcn/ui)
 │   ├── hooks/                # useToast, useMobile
 │   ├── lib/                  # Utilidades y helpers
@@ -311,7 +354,7 @@ npm run lint         # Linting del código
 Alisha-s-Atelier/
 ├── public/
 │   ├── documents/cv/
-│   │   └── cv2.pdf                    # CV actualizado para descarga
+│   │   └── CurriculumAlisha.pdf       # CV actualizado para descarga
 │   ├── images/
 │   │   ├── portfolio/                 # Logos de empresas con calidad optimizada
 │   │   │   ├── logo-omkrom.jpeg       # Omkrom (actual)
@@ -345,7 +388,8 @@ Alisha-s-Atelier/
 │   │   │   ├── contact-section.tsx   # Cards glassmorphism + copy-to-clipboard
 │   │   │   ├── profile-section.tsx   # Avatar gradient + floating elements
 │   │   │   ├── projects-section.tsx  # Project cards 3D + hover effects
-│   │   │   └── experience-section.tsx # Timeline aesthetic + stats
+│   │   │   ├── experience-section.tsx # Timeline aesthetic + stats
+│   │   │   └── education-section.tsx  # Academic timeline + formación
 │   │   └── ui/                       # Shadcn/ui components
 │   │       ├── button.tsx            # Botones con gradientes
 │   │       ├── card.tsx              # Cards base para glassmorphism
@@ -376,7 +420,7 @@ const personalInfo = {
   title: "Full-Stack Developer & Creative Coder", 
   description: "Hello! I'm Alisha, a passionate developer...",
   technologies: ["JavaScript", "HTML", "CSS", "SQL", "Java", "Python", "Swift", "NoSQL"],
-  cvPath: "/documents/cv/cv2.pdf",
+  cvPath: "/documents/cv/CurriculumAlisha.pdf",
   profileImage: "/images/profile/imagenpro.png"
 }
 ```
@@ -540,9 +584,10 @@ Este portfolio es un ejemplo de cómo crear experiencias web aesthetic y funcion
 
 *"Code is poetry, design is music, and together they create magic"* 🎭✨
 
-**Portfolio Version**: 2.2 Aesthetic ✨  
+**Portfolio Version**: 2.3 Aesthetic ✨  
 **Última actualización**: Julio 2025  
 **Stack actualizado**: JavaScript, HTML, CSS, SQL, Java, Python, Swift, NoSQL  
 **Métodos de contacto**: Email, WhatsApp, Telegram (streamlined)  
 **Nueva característica**: Loading Screen Premium de 3 segundos  
+**Nueva sección**: Academic Journey - Formación Académica completa  
 **Estado**: Activamente mantenido y con amor 💖

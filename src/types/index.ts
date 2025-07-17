@@ -22,3 +22,18 @@ export interface ExperienceItem {
   icon?: React.ReactElement;
 }
 
+export interface EducationItem {
+  id: string;
+  title: string;
+  specialization: string;
+  institution: string;
+  location: string;
+  dateRange: string;
+  status: string;
+  description: string;
+  skills: string[];
+  icon?: React.ReactElement;
+  level: 'superior' | 'medio' | 'secundaria';
+  certificateUrl?: string;
+}
+

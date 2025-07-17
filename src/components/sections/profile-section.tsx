@@ -96,7 +96,7 @@ export default function ProfileSection() {
               </Link>
             </Button>
             <Button variant="outline" size="lg" asChild className="relative overflow-hidden border-2 border-purple-200 hover:border-purple-300 dark:border-purple-800 dark:hover:border-purple-700 text-purple-700 dark:text-purple-300 hover:bg-purple-50 dark:hover:bg-purple-900/20 font-semibold px-8 py-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 group">
-              <a href="/documents/cv/cv2.pdf" download>
+              <a href="/documents/cv/CurriculumAlisha.pdf" download>
                 <span className="flex items-center space-x-2">
                   <Download className="h-5 w-5 group-hover:animate-bounce" />
                   <span>Download CV</span>
