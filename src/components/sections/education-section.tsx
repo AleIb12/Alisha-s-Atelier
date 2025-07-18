@@ -53,7 +53,10 @@ export default function EducationSection() {
   return (
     <SectionWrapper 
       id="education" 
-      title="Academic Journey" 
+      title="Trayectoria Educativa"
+      subtitle="Desde fundamentos científicos hasta desarrollo de aplicaciones multiplataforma, cada etapa ha construido mi base técnica y profesional."
+      badge="Formación Académica"
+      showScrollIndicator={true}
       className="bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 dark:from-blue-950/20 dark:via-indigo-950/20 dark:to-purple-950/20 relative overflow-hidden"
     >
       {/* Floating background elements */}
@@ -62,22 +65,6 @@ export default function EducationSection() {
       <div className="absolute top-1/2 left-1/3 w-20 h-20 bg-gradient-to-br from-purple-400/10 to-blue-400/10 rounded-full blur-xl animate-pulse delay-1000"></div>
       
       <div className="relative space-y-12">
-        {/* Section header */}
-        <div className="text-center space-y-6">
-          <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-blue-100 to-indigo-100 dark:from-blue-900/30 dark:to-indigo-900/30 rounded-full">
-            <GraduationCap className="h-4 w-4 text-blue-600 dark:text-blue-400 mr-2" />
-            <span className="text-sm font-medium text-blue-700 dark:text-blue-300">Formación Académica</span>
-          </div>
-          <div className="space-y-4">
-            <h2 className="text-4xl md:text-5xl font-headline font-bold bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 bg-clip-text text-transparent">
-              Trayectoria Educativa
-            </h2>
-            <p className="text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto leading-relaxed">
-              Desde fundamentos científicos hasta desarrollo de aplicaciones multiplataforma, cada etapa ha construido mi base técnica y profesional.
-            </p>
-          </div>
-        </div>
-
         {/* Enhanced Timeline */}
         <div className="relative max-w-6xl mx-auto">
           {/* Timeline line with gradient */}

@@ -1,13 +1,29 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import SectionWrapper from '@/components/common/section-wrapper';
+import ProjectStats from '@/components/common/project-stats';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
-import { ArrowUpRight, Code2, Eye, Sparkles, ExternalLink, Heart, Star } from 'lucide-react';
+import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
+import { ArrowUpRight, Code2, Eye, Sparkles, ExternalLink, Heart, Star, Filter, Calendar, Users, GitBranch, Zap, Award, CheckCircle, Clock } from 'lucide-react';
+import { useState } from 'react';
 import type { Project } from '@/types';
 
-const projectsData: Project[] = [
+interface ExtendedProject extends Project {
+  category: 'web-app' | 'api' | 'mobile' | 'tool';
+  status: 'completed' | 'in-progress' | 'featured';
+  metrics: {
+    linesOfCode?: number;
+    developmentTime: string;
+    teamSize: number;
+    complexity: 'beginner' | 'intermediate' | 'advanced';
+  };
+  highlights: string[];
+  gallery?: string[];
+}
+
+const projectsData: ExtendedProject[] = [
   {
     id: '1',
     title: 'Health Mobile',
@@ -16,7 +32,21 @@ const projectsData: Project[] = [
     imageHint: 'health tracking app',
     technologies: ['React', 'Node.js', 'SQL', 'NoSQL', 'JavaScript', 'HTML/CSS', 'AI'],
     liveDemoUrl: 'https://salud-movil.vercel.app/',
-    repoUrl: undefined, // Private repository
+    repoUrl: undefined,
+    category: 'web-app',
+    status: 'featured',
+    metrics: {
+      linesOfCode: 5200,
+      developmentTime: '3 months',
+      teamSize: 1,
+      complexity: 'advanced'
+    },
+    highlights: [
+      'AI-powered health recommendations',
+      'Real-time data synchronization',
+      'Advanced analytics dashboard',
+      'Multi-database architecture'
+    ]
   },
   {
     id: '2',
@@ -27,6 +57,20 @@ const projectsData: Project[] = [
     technologies: ['React', 'JavaScript', 'API', 'HTML/CSS'],
     liveDemoUrl: 'https://projecto-pokemon.vercel.app',
     repoUrl: 'https://github.com/AleIb12/projecto-pokemon',
+    category: 'web-app',
+    status: 'completed',
+    metrics: {
+      linesOfCode: 2800,
+      developmentTime: '6 weeks',
+      teamSize: 1,
+      complexity: 'intermediate'
+    },
+    highlights: [
+      'RESTful API integration',
+      'Advanced search & filtering',
+      'Responsive design',
+      'Performance optimization'
+    ]
   },
   {
     id: '3',
@@ -37,10 +81,76 @@ const projectsData: Project[] = [
     technologies: ['React', 'JavaScript', 'HTML', 'CSS', 'Web Audio API'],
     liveDemoUrl: 'https://piano-six-kappa.vercel.app',
     repoUrl: 'https://github.com/AleIb12/piano',
+    category: 'tool',
+    status: 'completed',
+    metrics: {
+      linesOfCode: 1500,
+      developmentTime: '4 weeks',
+      teamSize: 1,
+      complexity: 'intermediate'
+    },
+    highlights: [
+      'Web Audio API integration',
+      'Real-time sound synthesis',
+      'Keyboard interaction',
+      'Mobile-friendly interface'
+    ]
   },
 ];
 
 export default function ProjectsSection() {
+  const [selectedFilter, setSelectedFilter] = useState<string>('all');
+  const [selectedProject, setSelectedProject] = useState<ExtendedProject | null>(null);
+
+  const filterOptions = [
+    { value: 'all', label: 'All Projects', icon: <Sparkles className="h-4 w-4" /> },
+    { value: 'web-app', label: 'Web Apps', icon: <Code2 className="h-4 w-4" /> },
+    { value: 'tool', label: 'Tools', icon: <Zap className="h-4 w-4" /> },
+    { value: 'featured', label: 'Featured', icon: <Award className="h-4 w-4" /> },
+  ];
+
+  const filteredProjects = projectsData.filter(project => 
+    selectedFilter === 'all' || 
+    project.category === selectedFilter || 
+    project.status === selectedFilter
+  );
+
+  const getStatusBadge = (status: ExtendedProject['status']) => {
+    const statusConfig = {
+      'completed': { 
+        label: 'Completed', 
+        color: 'bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-300',
+        icon: <CheckCircle className="h-3 w-3" />
+      },
+      'in-progress': { 
+        label: 'In Progress', 
+        color: 'bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-300',
+        icon: <Clock className="h-3 w-3" />
+      },
+      'featured': { 
+        label: 'Featured', 
+        color: 'bg-purple-100 text-purple-700 dark:bg-purple-900/30 dark:text-purple-300',
+        icon: <Award className="h-3 w-3" />
+      }
+    };
+    
+    const config = statusConfig[status];
+    return (
+      <Badge className={`${config.color} flex items-center space-x-1 text-xs font-medium px-2 py-1`}>
+        {config.icon}
+        <span>{config.label}</span>
+      </Badge>
+    );
+  };
+
+  const getComplexityColor = (complexity: ExtendedProject['metrics']['complexity']) => {
+    const colors = {
+      'beginner': 'text-green-600 dark:text-green-400',
+      'intermediate': 'text-yellow-600 dark:text-yellow-400',
+      'advanced': 'text-red-600 dark:text-red-400'
+    };
+    return colors[complexity];
+  };
   return (
     <SectionWrapper id="projects" title="My Creations" className="bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 dark:from-blue-950/20 dark:via-purple-950/20 dark:to-pink-950/20 relative overflow-hidden">
       {/* Floating background elements */}
@@ -49,24 +159,53 @@ export default function ProjectsSection() {
       <div className="absolute top-1/2 left-1/4 w-24 h-24 bg-gradient-to-br from-pink-400/10 to-blue-400/10 rounded-full blur-xl animate-pulse delay-500"></div>
       
       <div className="relative space-y-12">
-        {/* Section header with aesthetic styling */}
-        <div className="text-center space-y-6">
-          <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-blue-100 to-purple-100 dark:from-blue-900/30 dark:to-purple-900/30 rounded-full">
-            <Sparkles className="h-4 w-4 text-blue-600 dark:text-blue-400 mr-2" />
-            <span className="text-sm font-medium text-blue-700 dark:text-blue-300">Portfolio Showcase</span>
+        {/* Section header with filters */}
+        <div className="text-center space-y-8">
+          <div className="space-y-6">
+            <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-blue-100 to-purple-100 dark:from-blue-900/30 dark:to-purple-900/30 rounded-full">
+              <Sparkles className="h-4 w-4 text-blue-600 dark:text-blue-400 mr-2" />
+              <span className="text-sm font-medium text-blue-700 dark:text-blue-300">Portfolio Showcase</span>
+            </div>
+            <div className="space-y-4">
+              <h2 className="text-4xl md:text-5xl font-headline font-bold bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
+                Featured Projects
+              </h2>
+              <p className="text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto leading-relaxed">
+                Explore my latest work where creativity meets functionality. Each project represents a unique challenge solved with passion and attention to detail.
+              </p>
+            </div>
           </div>
-          <div className="space-y-4">
-            <h2 className="text-4xl md:text-5xl font-headline font-bold bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
-              Featured Projects
-            </h2>
-            <p className="text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto leading-relaxed">
-              Explore my latest work where creativity meets functionality. Each project represents a unique challenge solved with passion and attention to detail.
-            </p>
+
+          {/* Filter buttons */}
+          <div className="flex flex-wrap justify-center gap-3">
+            {filterOptions.map((filter) => (
+              <Button
+                key={filter.value}
+                variant={selectedFilter === filter.value ? "default" : "outline"}
+                size="sm"
+                onClick={() => setSelectedFilter(filter.value)}
+                className={`
+                  rounded-full transition-all duration-300 transform hover:scale-105 flex items-center space-x-2
+                  ${selectedFilter === filter.value 
+                    ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white shadow-lg' 
+                    : 'border-purple-200 hover:border-purple-300 hover:bg-purple-50 dark:border-purple-700 dark:hover:border-purple-600 dark:hover:bg-purple-900/50'
+                  }
+                `}
+              >
+                {filter.icon}
+                <span className="font-medium">{filter.label}</span>
+                {filter.value === 'featured' && (
+                  <Badge className="bg-yellow-400 text-yellow-900 text-xs ml-1 px-1">
+                    {projectsData.filter(p => p.status === 'featured').length}
+                  </Badge>
+                )}
+              </Button>
+            ))}
           </div>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
-          {projectsData.map((project, index) => (
+          {filteredProjects.map((project, index) => (
             <Card key={project.id} className="group overflow-hidden bg-white/80 dark:bg-gray-900/80 backdrop-blur-xl border-0 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:scale-[1.03] hover:-translate-y-2 rounded-3xl relative">
               {/* Card background gradient */}
               <div className="absolute inset-0 bg-gradient-to-br from-blue-50/50 via-purple-50/50 to-pink-50/50 dark:from-blue-950/20 dark:via-purple-950/20 dark:to-pink-950/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-3xl"></div>
@@ -76,9 +215,12 @@ export default function ProjectsSection() {
                 {String(index + 1).padStart(2, '0')}
               </div>
               
-              {/* Favorite star */}
-              <div className="absolute top-4 right-4 z-10 bg-white/90 dark:bg-gray-900/90 backdrop-blur-sm rounded-full p-2 shadow-lg group-hover:scale-110 transition-transform duration-300">
-                <Star className="h-4 w-4 text-yellow-500 group-hover:fill-yellow-500 transition-all duration-300" />
+              {/* Status and Favorite */}
+              <div className="absolute top-4 right-4 z-10 flex items-center space-x-2">
+                {getStatusBadge(project.status)}
+                <div className="bg-white/90 dark:bg-gray-900/90 backdrop-blur-sm rounded-full p-2 shadow-lg group-hover:scale-110 transition-transform duration-300">
+                  <Star className="h-4 w-4 text-yellow-500 group-hover:fill-yellow-500 transition-all duration-300" />
+                </div>
               </div>
 
               <CardHeader className="p-0 relative">
@@ -93,21 +235,60 @@ export default function ProjectsSection() {
                   />
                   {/* Overlay gradient */}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  
+                  {/* Quick info overlay */}
+                  <div className="absolute bottom-4 left-4 right-4 bg-white/90 dark:bg-gray-900/90 backdrop-blur-md rounded-xl p-3 opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">
+                    <div className="grid grid-cols-3 gap-3 text-center">
+                      <div className="space-y-1">
+                        <GitBranch className="h-4 w-4 mx-auto text-blue-600 dark:text-blue-400" />
+                        <p className="text-xs font-semibold text-gray-900 dark:text-gray-100">{project.metrics.linesOfCode ? `${(project.metrics.linesOfCode / 1000).toFixed(1)}k` : 'N/A'}</p>
+                        <p className="text-xs text-gray-600 dark:text-gray-400">Lines</p>
+                      </div>
+                      <div className="space-y-1">
+                        <Clock className="h-4 w-4 mx-auto text-purple-600 dark:text-purple-400" />
+                        <p className="text-xs font-semibold text-gray-900 dark:text-gray-100">{project.metrics.developmentTime}</p>
+                        <p className="text-xs text-gray-600 dark:text-gray-400">Time</p>
+                      </div>
+                      <div className="space-y-1">
+                        <Users className="h-4 w-4 mx-auto text-pink-600 dark:text-pink-400" />
+                        <p className="text-xs font-semibold text-gray-900 dark:text-gray-100">{project.metrics.teamSize}</p>
+                        <p className="text-xs text-gray-600 dark:text-gray-400">Team</p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </CardHeader>
               
               <CardContent className="relative p-6 flex-grow space-y-4">
                 <div className="space-y-3">
-                  <CardTitle className="text-2xl font-headline bg-gradient-to-r from-gray-800 to-gray-600 dark:from-gray-200 dark:to-gray-400 bg-clip-text text-transparent font-bold group-hover:from-blue-600 group-hover:to-purple-600 transition-all duration-300">
-                    {project.title}
-                  </CardTitle>
+                  <div className="flex items-start justify-between">
+                    <CardTitle className="text-2xl font-headline bg-gradient-to-r from-gray-800 to-gray-600 dark:from-gray-200 dark:to-gray-400 bg-clip-text text-transparent font-bold group-hover:from-blue-600 group-hover:to-purple-600 transition-all duration-300">
+                      {project.title}
+                    </CardTitle>
+                    <Badge className={`text-xs ${getComplexityColor(project.metrics.complexity)} bg-gray-100 dark:bg-gray-800`}>
+                      {project.metrics.complexity}
+                    </Badge>
+                  </div>
                   <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed min-h-[4.5rem] group-hover:text-gray-700 dark:group-hover:text-gray-300 transition-colors duration-300">
                     {project.description}
                   </p>
                 </div>
                 
+                {/* Project highlights */}
+                <div className="space-y-2">
+                  <p className="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wide">Key Features</p>
+                  <div className="space-y-1">
+                    {project.highlights.slice(0, 2).map((highlight, idx) => (
+                      <div key={idx} className="flex items-center space-x-2 text-xs text-gray-600 dark:text-gray-400">
+                        <CheckCircle className="h-3 w-3 text-green-500 flex-shrink-0" />
+                        <span>{highlight}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+                
                 <div className="flex flex-wrap gap-2">
-                  {project.technologies.map((tech, techIndex) => (
+                  {project.technologies.slice(0, 4).map((tech, techIndex) => (
                     <Badge 
                       key={tech} 
                       variant="secondary" 
@@ -122,6 +303,11 @@ export default function ProjectsSection() {
                       {tech}
                     </Badge>
                   ))}
+                  {project.technologies.length > 4 && (
+                    <Badge variant="outline" className="rounded-full px-3 py-1 text-xs text-gray-500 dark:text-gray-400">
+                      +{project.technologies.length - 4} more
+                    </Badge>
+                  )}
                 </div>
               </CardContent>
               
@@ -152,6 +338,123 @@ export default function ProjectsSection() {
                       </Link>
                     </Button>
                   )}
+                  <Dialog>
+                    <DialogTrigger asChild>
+                      <Button 
+                        variant="ghost" 
+                        size="sm"
+                        onClick={() => setSelectedProject(project)}
+                        className="rounded-full hover:bg-purple-50 dark:hover:bg-purple-900/20 text-purple-600 dark:text-purple-400 transition-all duration-300 group/btn"
+                      >
+                        <ExternalLink className="h-4 w-4 group-hover/btn:rotate-12 transition-transform duration-300" />
+                      </Button>
+                    </DialogTrigger>
+                    <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">
+                      <DialogHeader>
+                        <DialogTitle className="text-2xl font-headline bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
+                          {project.title}
+                        </DialogTitle>
+                        <DialogDescription className="text-base">
+                          {project.description}
+                        </DialogDescription>
+                      </DialogHeader>
+                      <div className="space-y-6 mt-6">
+                        <div className="aspect-video rounded-xl overflow-hidden">
+                          <Image
+                            src={project.imageUrl}
+                            alt={project.title}
+                            width={800}
+                            height={450}
+                            className="object-cover w-full h-full"
+                          />
+                        </div>
+                        
+                        <div className="grid md:grid-cols-2 gap-6">
+                          <div className="space-y-4">
+                            <h4 className="font-semibold text-lg">Project Details</h4>
+                            <div className="space-y-3">
+                              <div className="flex justify-between">
+                                <span className="text-gray-600 dark:text-gray-400">Category:</span>
+                                <Badge>{project.category}</Badge>
+                              </div>
+                              <div className="flex justify-between">
+                                <span className="text-gray-600 dark:text-gray-400">Status:</span>
+                                {getStatusBadge(project.status)}
+                              </div>
+                              <div className="flex justify-between">
+                                <span className="text-gray-600 dark:text-gray-400">Complexity:</span>
+                                <span className={`font-medium ${getComplexityColor(project.metrics.complexity)}`}>
+                                  {project.metrics.complexity}
+                                </span>
+                              </div>
+                              <div className="flex justify-between">
+                                <span className="text-gray-600 dark:text-gray-400">Development Time:</span>
+                                <span className="font-medium">{project.metrics.developmentTime}</span>
+                              </div>
+                              {project.metrics.linesOfCode && (
+                                <div className="flex justify-between">
+                                  <span className="text-gray-600 dark:text-gray-400">Lines of Code:</span>
+                                  <span className="font-medium">{project.metrics.linesOfCode.toLocaleString()}</span>
+                                </div>
+                              )}
+                            </div>
+                          </div>
+                          
+                          <div className="space-y-4">
+                            <h4 className="font-semibold text-lg">Key Features</h4>
+                            <ul className="space-y-2">
+                              {project.highlights.map((highlight, idx) => (
+                                <li key={idx} className="flex items-start space-x-2">
+                                  <CheckCircle className="h-4 w-4 text-green-500 mt-1 flex-shrink-0" />
+                                  <span className="text-sm text-gray-600 dark:text-gray-400">{highlight}</span>
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        </div>
+                        
+                        <div className="space-y-3">
+                          <h4 className="font-semibold text-lg">Technologies Used</h4>
+                          <div className="flex flex-wrap gap-2">
+                            {project.technologies.map((tech, techIndex) => (
+                              <Badge 
+                                key={tech} 
+                                variant="secondary" 
+                                className={`
+                                  bg-gradient-to-r font-medium text-white border-0 shadow-md rounded-full px-3 py-1
+                                  ${techIndex % 4 === 0 ? 'from-blue-500 to-blue-600' : 
+                                    techIndex % 4 === 1 ? 'from-purple-500 to-purple-600' :
+                                    techIndex % 4 === 2 ? 'from-pink-500 to-pink-600' :
+                                    'from-indigo-500 to-indigo-600'}
+                                `}
+                              >
+                                {tech}
+                              </Badge>
+                            ))}
+                          </div>
+                        </div>
+                        
+                        <div className="flex space-x-4 pt-4">
+                          {project.liveDemoUrl && (
+                            <Button asChild className="flex-1">
+                              <Link href={project.liveDemoUrl} target="_blank" rel="noopener noreferrer">
+                                <Eye className="mr-2 h-4 w-4" />
+                                View Live Demo
+                              </Link>
+                            </Button>
+                          )}
+                          {project.repoUrl && (
+                            <Button variant="outline" asChild className="flex-1">
+                              <Link href={project.repoUrl} target="_blank" rel="noopener noreferrer">
+                                <Code2 className="mr-2 h-4 w-4" />
+                                View Source Code
+                              </Link>
+                            </Button>
+                          )}
+                        </div>
+                      </div>
+                    </DialogContent>
+                  </Dialog>
                 </div>
                 <div className="flex items-center space-x-1">
                   <Heart className="h-4 w-4 text-pink-500 group-hover:fill-pink-500 group-hover:animate-pulse transition-all duration-300" />
@@ -161,7 +464,52 @@ export default function ProjectsSection() {
             </Card>
           ))}
         </div>
-        
+        {/* Popular Technologies */}
+        <div className="text-center space-y-6 mt-12">
+          <h3 className="text-2xl font-headline font-bold bg-gradient-to-r from-gray-700 to-gray-900 dark:from-gray-300 dark:to-gray-100 bg-clip-text text-transparent">
+            Technologies I Work With
+          </h3>
+          <div className="flex flex-wrap justify-center gap-3 max-w-4xl mx-auto">
+            {[...new Set(projectsData.flatMap(p => p.technologies))].map((tech, index) => {
+              const techCount = projectsData.filter(p => p.technologies.includes(tech)).length;
+              return (
+                <Badge 
+                  key={tech} 
+                  variant="secondary" 
+                  className={`
+                    bg-gradient-to-r font-medium text-white border-0 shadow-md hover:shadow-lg 
+                    transition-all duration-300 transform hover:scale-105 rounded-full px-4 py-2 
+                    cursor-pointer group relative
+                    ${index % 4 === 0 ? 'from-blue-500 to-blue-600' : 
+                      index % 4 === 1 ? 'from-purple-500 to-purple-600' :
+                      index % 4 === 2 ? 'from-pink-500 to-pink-600' :
+                      'from-indigo-500 to-indigo-600'}
+                  `}
+                >
+                  <span className="flex items-center space-x-2">
+                    <span>{tech}</span>
+                    <span className="text-xs bg-white/20 rounded-full px-2 py-0.5">
+                      {techCount}
+                    </span>
+                  </span>
+                  {/* Tooltip */}
+                  <div className="absolute -top-10 left-1/2 transform -translate-x-1/2 bg-gray-900 dark:bg-gray-100 text-white dark:text-gray-900 text-xs rounded-lg px-3 py-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none whitespace-nowrap">
+                    Used in {techCount} project{techCount > 1 ? 's' : ''}
+                  </div>
+                </Badge>
+              );
+            })}
+          </div>
+        </div>
+
+        {/* Project Statistics */}
+        <ProjectStats
+          totalProjects={projectsData.length}
+          totalLinesOfCode={projectsData.reduce((acc, p) => acc + (p.metrics.linesOfCode || 0), 0)}
+          totalTechnologies={[...new Set(projectsData.flatMap(p => p.technologies))].length}
+          featuredProjects={projectsData.filter(p => p.status === 'featured').length}
+        />
+
         {/* Call to action section */}
         <div className="text-center space-y-6 mt-16">
           <div className="relative p-8 bg-white/70 dark:bg-gray-900/70 backdrop-blur-xl rounded-3xl border border-purple-200/50 dark:border-purple-800/50 shadow-xl max-w-2xl mx-auto">
