@@ -11,6 +11,7 @@ import { Mail, MessageCircle, Phone, Calendar, ExternalLink, Rabbit, Copy, Send,
 import { useToast } from "@/hooks/use-toast";
 import { useState } from 'react';
 import SocialLinks from '@/components/common/social-links';
+import { sendEmail, createEmailParams, isValidEmail } from '@/lib/email-template';
 
 interface ContactCard {
   title: string;
@@ -90,16 +91,60 @@ export default function ContactSection() {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1500));
+    // Validate form data
+    if (!formData.name.trim() || !formData.email.trim() || !formData.message.trim()) {
+      toast({
+        title: "⚠️ Campos requeridos",
+        description: "Por favor completa todos los campos antes de enviar.",
+        variant: "destructive",
+      });
+      setIsSubmitting(false);
+      return;
+    }
     
-    toast({
-      title: "🚀 Message Sent!",
-      description: "Thanks for reaching out! I'll get back to you soon.",
-      variant: "default",
-    });
+    // Validate email format
+    if (!isValidEmail(formData.email)) {
+      toast({
+        title: "⚠️ Email inválido",
+        description: "Por favor ingresa un email válido.",
+        variant: "destructive",
+      });
+      setIsSubmitting(false);
+      return;
+    }
     
-    setFormData({ name: '', email: '', message: '' });
+    try {
+      // Create email parameters
+      const emailParams = createEmailParams(
+        formData.name,
+        formData.email,
+        formData.message
+      );
+      
+      // Send email using EmailJS
+      const success = await sendEmail(emailParams);
+      
+      if (success) {
+        toast({
+          title: "🚀 ¡Mensaje Enviado!",
+          description: "Gracias por contactarme. Te responderé pronto.",
+          variant: "default",
+        });
+        
+        // Reset form
+        setFormData({ name: '', email: '', message: '' });
+      } else {
+        throw new Error('Failed to send email');
+      }
+    } catch (error) {
+      console.error('Error sending email:', error);
+      toast({
+        title: "❌ Error al enviar",
+        description: "Hubo un problema al enviar el mensaje. Inténtalo de nuevo o usa otro método de contacto.",
+        variant: "destructive",
+      });
+    }
+    
     setIsSubmitting(false);
   };
 
@@ -179,7 +224,15 @@ export default function ContactSection() {
         </div>
 
         <div className="space-y-8">
-          {/* Quick Contact Form */}
+          {/* Quick Contact Form - TEMPORARILY HIDDEN UNTIL EMAILJS IS CONFIGURED */}
+          {/* 
+            🚀 TO REACTIVATE THE QUICK MESSAGE FORM:
+            1. Configure EmailJS credentials in .env.local or src/lib/emailjs-config.ts
+            2. Uncomment the entire Card component below (remove comment blocks)
+            3. Test the form functionality
+            4. See EMAIL_SETUP.md for configuration guide
+          */}
+          {/* 
           <Card className="relative overflow-hidden bg-gradient-to-br from-purple-50/80 to-pink-50/80 dark:from-purple-950/30 dark:to-pink-950/30 border-purple-200/50 dark:border-purple-800/50 shadow-xl">
             <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-purple-400/10 to-pink-400/10 rounded-full transform translate-x-16 -translate-y-16"></div>
             <CardHeader className="relative">
@@ -262,6 +315,7 @@ export default function ContactSection() {
               </form>
             </CardContent>
           </Card>
+          */}
 
           {/* Contact Methods */}
           <div className="space-y-6">

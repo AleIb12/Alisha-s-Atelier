@@ -54,12 +54,15 @@ Un portfolio moderno y elegante desarrollado con Next.js 15, TypeScript y Tailwi
 - **Stats Educativas**: Métricas de formación y años de estudio
 
 ### 📞 **Contact Section (Get in Touch)**
-- **Quick Contact Form**: Formulario integrado con validación en tiempo real
+- **Quick Contact Form**: Formulario funcional con EmailJS para envío real de correos
+- **Email Integration**: Sistema completo de envío de emails a `ibarrabelloalisha@gmail.com`
+- **Form Validation**: Validación en tiempo real con mensajes de error descriptivos
 - **Multi-Channel Contact**: Email, WhatsApp, Telegram con información detallada
 - **Response Time Indicators**: Tiempos de respuesta por cada canal
 - **Availability Status**: Estado en tiempo real para nuevos proyectos
 - **Feature Comparison**: Características de cada método de comunicación
 - **Professional Email**: Sistema de copia de email con notificaciones
+- **Toast Notifications**: Feedback visual para éxito y errores de envío
 
 ## 🛠️ Stack Tecnológico Completo
 
@@ -91,6 +94,8 @@ Un portfolio moderno y elegante desarrollado con Next.js 15, TypeScript y Tailwi
 - **Accessibility**: WCAG compliant components
 - **Responsive**: Mobile-first responsive design
 - **Performance**: Core Web Vitals optimized
+- **EmailJS**: Real email sending system for contact form
+- **Form Validation**: Client-side validation with error handling
 
 ## 📁 Estructura del Proyecto
 
@@ -240,7 +245,37 @@ El favicon actual tiene el diseño "AI" con brackets de código. Para personaliz
 node generate-favicons.js
 ```
 
-## 🔧 Configuración Avanzada
+## � Configuración de EmailJS
+
+### **Sistema de Envío de Correos Real**
+El formulario de contacto utiliza EmailJS para enviar correos reales directamente a tu bandeja de entrada.
+
+**Configuración Rápida:**
+1. Crear cuenta en [EmailJS.com](https://www.emailjs.com)
+2. Configurar servicio de Gmail
+3. Crear template de email
+4. Obtener credenciales (Public Key, Service ID, Template ID)
+5. Configurar variables de entorno
+
+**Variables de Entorno (.env.local):**
+```env
+NEXT_PUBLIC_EMAILJS_PUBLIC_KEY=tu_public_key
+NEXT_PUBLIC_EMAILJS_SERVICE_ID=tu_service_id  
+NEXT_PUBLIC_EMAILJS_TEMPLATE_ID=tu_template_id
+```
+
+**Características del Sistema:**
+- ✅ Envío real de correos a `ibarrabelloalisha@gmail.com`
+- ✅ Validación de formulario con mensajes de error
+- ✅ Plantillas HTML profesionales
+- ✅ Confirmación visual con toast notifications
+- ✅ Plan gratuito: 200 emails/mes
+
+**Guías Completas:**
+- 📖 [Configuración Rápida](./EMAIL_SETUP.md) - Setup en 5 minutos
+- 📖 [Guía Detallada](./EMAILJS_SETUP.md) - Configuración paso a paso
+
+## �🔧 Configuración Avanzada
 
 ### **Optimización de Imágenes**
 Las imágenes están configuradas en `next.config.ts`:
