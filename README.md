@@ -31,13 +31,14 @@ Un portfolio moderno y elegante desarrollado con Next.js 15, TypeScript y Tailwi
 - **Call-to-Action**: Botón para contacto directo con efectos hover
 - **Avatar Profesional**: Imagen personal con efectos de glassmorphism
 
-### 💼 **Projects Section (Featured Work)**
-- **Sistema de Filtros Avanzado**: All Projects, Web Apps, Tools, Featured
+### 🎯 **Projects Section (Featured Work)**
+- **Sistema de Filtros Avanzado**: All Projects, Web Apps, APIs, Tools, Featured
 - **Project Cards Premium**: Hover effects, métricas en overlay, badges de estado
 - **Métricas Detalladas**: Líneas de código, tiempo de desarrollo, complejidad
 - **Modal de Detalles**: Vista expandida con información completa del proyecto
 - **Estadísticas Animadas**: Contadores con animaciones y barras de progreso
 - **Technology Showcase**: Visualización de todas las tecnologías con tooltips
+- **Professional Projects**: MCHAPP, Neonize y Omkrom API destacados
 
 ### 🎓 **Experience Section (Professional Journey)**
 - **Timeline Profesional**: Línea de tiempo con gradientes púrpura-rosa
@@ -307,10 +308,11 @@ export const metadata: Metadata = {
 ## 📊 Métricas del Proyecto
 
 ### **Estadísticas Actuales**
-- 📁 **3 Proyectos** principales showcased
-- 💻 **9,500+ líneas** de código TypeScript/TSX
-- 🛠️ **11 tecnologías** diferentes utilizadas
+- 📁 **6 Proyectos** principales showcased
+- 💻 **21,000+ líneas** de código TypeScript/TSX/Python/Node.js/Swift
+- 🛠️ **20+ tecnologías** diferentes utilizadas
 - ⭐ **1 proyecto destacado** (Health Mobile)
+- 🏢 **3 proyectos profesionales** (MCHAPP, Neonize, Omkrom API)
 - 🎨 **25+ componentes** Shadcn UI integrados
 - 📱 **100% responsive** en todos los dispositivos
 
@@ -329,14 +331,38 @@ export const metadata: Metadata = {
 - **Tiempo de desarrollo**: 3 meses
 - **Características**: AI-powered recommendations, real-time sync, analytics dashboard
 
-### **2. Pokémon Project**
+### **2. MCHAPP** 🏢 Professional
+- **Tecnologías**: Node.js, Express, REST API, JavaScript, PostgreSQL, IoT
+- **Complejidad**: Advanced
+- **Líneas de código**: 4,500+
+- **Tiempo de desarrollo**: 2 meses (trabajo en equipo)
+- **Características**: IoT integration, apartment management, access control, REST API
+- **Confidencial**: Proyecto profesional para MyCityHome
+
+### **3. Neonize** 🤖 Professional
+- **Tecnologías**: Python, PostgreSQL, WhatsApp API, Database Management
+- **Complejidad**: Advanced
+- **Líneas de código**: 3,200+
+- **Tiempo de desarrollo**: 1.5 meses
+- **Características**: WhatsApp automation, database sync, contact management
+- **Confidencial**: Proyecto profesional para MyCityHome
+
+### **4. Omkrom API** 🚀 Professional (Current)
+- **Tecnologías**: Swift, Vapor 4, PostgreSQL, REST API, Authentication, Email System
+- **Complejidad**: Advanced
+- **Líneas de código**: 3,800+
+- **Tiempo de desarrollo**: En curso
+- **Características**: Swift Vapor 4 framework, JWT authentication, user management, email system
+- **Estado**: En desarrollo activo para Omkrom
+
+### **5. Pokémon Project**
 - **Tecnologías**: React, JavaScript, API, HTML/CSS
 - **Complejidad**: Intermediate  
 - **Líneas de código**: 2,800+
 - **Tiempo de desarrollo**: 6 semanas
 - **Características**: RESTful API integration, advanced search, responsive design
 
-### **3. Piano Simulator**
+### **6. Piano Simulator**
 - **Tecnologías**: React, JavaScript, HTML, CSS, Web Audio API
 - **Complejidad**: Intermediate
 - **Líneas de código**: 1,500+
@@ -446,13 +472,28 @@ Proyectos destacados con demos en vivo y código fuente:
    - **Tech**: React, Node.js, SQL, NoSQL, JavaScript, HTML/CSS, AI
    - *Repositorio privado*
 
-2. **Proyecto Pokémon** 🎮
+2. **MCHAPP** 🏢
+   - Plataforma de gestión integral de apartamentos con IoT
+   - **Tech**: Node.js, Express, REST API, JavaScript, PostgreSQL, IoT Integration
+   - *Proyecto profesional confidencial*
+
+3. **Neonize** 🤖
+   - Sistema de automatización de WhatsApp con Python
+   - **Tech**: Python, PostgreSQL, WhatsApp API, Database Management, Automation
+   - *Proyecto profesional confidencial*
+
+4. **Omkrom API** 🚀
+   - API REST backend desarrollada en Swift con Vapor 4
+   - **Tech**: Swift, Vapor 4, PostgreSQL, REST API, Authentication, Email System
+   - *Proyecto actual en desarrollo*
+
+5. **Proyecto Pokémon** 🎮
    - Pokedex interactiva con API REST
    - **Demo**: [projecto-pokemon.vercel.app](https://projecto-pokemon.vercel.app)
    - **Repo**: [github.com/AleIb12/projecto-pokemon](https://github.com/AleIb12/projecto-pokemon)
    - **Tech**: React, JavaScript, API, HTML/CSS
 
-3. **Simulador de Piano** 🎹
+6. **Simulador de Piano** 🎹
    - Piano virtual interactivo
    - **Demo**: [piano-six-kappa.vercel.app](https://piano-six-kappa.vercel.app)
    - **Repo**: [github.com/AleIb12/piano](https://github.com/AleIb12/piano)
@@ -464,15 +505,20 @@ Proyectos destacados con demos en vivo y código fuente:
 - **Cards Flotantes**: Tarjetas de experiencia con hover effects y transformaciones 3D
 - **Status Badges**: Indicadores "Current" y "Completed" con colores dinámicos
 - **Icons Temáticos**: Brain (Omkrom), Building (MyCityHome), Bot (Corazonistas)
-- **Stats Cards**: Métricas con "1 Year Experience", "3 Professional Roles", "15+ Technologies"
+- **Stats Cards**: Métricas con "1+ Year Experience", "4 Professional Roles", "20+ Technologies"
 - **Skills Badges**: Tecnologías con gradientes de colores rotativos
 
 #### 🏢 Experiencias Profesionales Destacadas:
 
+**Freelance Developer (Junio 2025 - Presente)** - Independent Contractor
+- **Stack**: React, Next.js, TypeScript, Node.js, Tailwind CSS
+- **Enfoque**: Desarrollo full-stack, relaciones con clientes, gestión de proyectos, diseño UI/UX
+- **Status**: 🟢 Posición actual (trabajo simultáneo)
+
 **Omkrom (Mayo 2025 - Presente)** - Software Developer
 - **Stack**: Swift, Angular, TypeScript, CSS, SQL
 - **Enfoque**: Desarrollo de aplicaciones, arquitectura de software, metodologías ágiles
-- **Status**: 🟢 Posición actual
+- **Status**: 🟢 Posición actual (trabajo simultáneo)
 
 **MyCityHome (Marzo 2025 - Mayo 2025)** - Software Developer  
 - **Stack**: React, TypeScript, Python, Java, CSS, PostgreSQL, Firebase
@@ -678,10 +724,11 @@ Este portfolio es un ejemplo de cómo crear experiencias web aesthetic y funcion
 
 *"Code is poetry, design is music, and together they create magic"* 🎭✨
 
-**Portfolio Version**: 2.3 Aesthetic ✨  
+**Portfolio Version**: 2.4 Professional ✨  
 **Última actualización**: Julio 2025  
 **Stack actualizado**: JavaScript, HTML, CSS, SQL, Java, Python, Swift, NoSQL  
-**Métodos de contacto**: Email, WhatsApp, Telegram (streamlined)  
-**Nueva característica**: Loading Screen Premium de 3 segundos  
+**Proyectos añadidos**: MCHAPP, Neonize, Omkrom API (3 proyectos profesionales)  
+**Nueva característica**: Sistema de filtros con categoría API  
 **Nueva sección**: Academic Journey - Formación Académica completa  
-**Estado**: Activamente mantenido y con amor 💖
+**Métricas actualizadas**: 6 proyectos, 21,000+ líneas de código, 20+ tecnologías  
+**Estado**: Portfolio completo con experiencia profesional 💖

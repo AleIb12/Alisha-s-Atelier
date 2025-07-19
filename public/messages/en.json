@@ -1,0 +1,102 @@
+{
+  "common": {
+    "portfolio": "Portfolio Showcase",
+    "featuredProjects": "Featured Projects",
+    "allProjects": "All Projects",
+    "webApps": "Web Apps",
+    "apis": "APIs", 
+    "tools": "Tools",
+    "featured": "Featured",
+    "completed": "Completed",
+    "inProgress": "In Progress",
+    "demo": "Demo",
+    "code": "Code",
+    "projectDetails": "Project Details",
+    "category": "Category",
+    "status": "Status",
+    "complexity": "Complexity",
+    "developmentTime": "Development Time",
+    "linesOfCode": "Lines of Code",
+    "keyFeatures": "Key Features",
+    "technologiesUsed": "Technologies Used",
+    "viewLiveDemo": "View Live Demo",
+    "viewSourceCode": "View Source Code",
+    "likeWhatYouSee": "Like what you see?",
+    "startProject": "Start a Project",
+    "advanced": "advanced",
+    "intermediate": "intermediate",
+    "beginner": "beginner",
+    "lines": "Lines",
+    "time": "Time",
+    "team": "Team"
+  },
+  "projects": {
+    "description": "Explore my latest work where creativity meets functionality. Each project represents a unique challenge solved with passion and attention to detail.",
+    "technologiesIWorkWith": "Technologies I Work With",
+    "collaborateMessage": "I'm always excited to work on new projects and bring creative ideas to life. Let's collaborate!",
+    "healthMobile": {
+      "title": "Health Mobile",
+      "description": "Web application focused on personal health tracking, integrating calorie data, menstrual cycle monitoring, and medication reminders.",
+      "highlights": [
+        "AI-powered health recommendations",
+        "Real-time data synchronization", 
+        "Advanced analytics dashboard",
+        "Multi-database architecture"
+      ]
+    },
+    "mchapp": {
+      "title": "MCHAPP",
+      "description": "Professional web application built with Node.js and Express for comprehensive apartment management. Features include smart device control (Sonoff bulbs), user management, and access logging with REST API integration.",
+      "highlights": [
+        "IoT device integration (Sonoff)",
+        "Comprehensive apartment management",
+        "REST API architecture",
+        "User authentication & authorization",
+        "Access control & logging system"
+      ]
+    },
+    "neonize": {
+      "title": "Neonize",
+      "description": "Python automation solution for WhatsApp messaging with PostgreSQL integration. Designed to automate message sending while managing contact synchronization and message tracking through database integration.",
+      "highlights": [
+        "WhatsApp automation integration",
+        "PostgreSQL database synchronization",
+        "Contact management system",
+        "Message tracking & analytics",
+        "Automated workflow processing"
+      ]
+    },
+    "omkromApi": {
+      "title": "Omkrom API",
+      "description": "REST API backend developed in Swift with Vapor 4 framework and PostgreSQL database. Features authentication and security, user management, email system, and relational data architecture with endpoints for profile management and hierarchical data.",
+      "highlights": [
+        "Swift & Vapor 4 framework",
+        "PostgreSQL relational database",
+        "Authentication & security system",
+        "User management endpoints",
+        "Email system integration",
+        "Hierarchical data architecture"
+      ]
+    },
+    "pokemon": {
+      "title": "Pokémon Project",
+      "description": "Interactive Pokedex developed with React and API consumption, featuring an intuitive interface and advanced Pokémon search functionality.",
+      "highlights": [
+        "RESTful API integration",
+        "Advanced search & filtering",
+        "Responsive design",
+        "Performance optimization"
+      ]
+    },
+    "piano": {
+      "title": "Piano Simulator",
+      "description": "Interactive virtual piano project that allows users to play notes and practice online with responsive design.",
+      "highlights": [
+        "Web Audio API integration",
+        "Real-time sound synthesis",
+        "Keyboard interaction",
+        "Mobile-friendly interface"
+      ]
+    }
+  }
+}

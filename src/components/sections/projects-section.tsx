@@ -50,6 +50,82 @@ const projectsData: ExtendedProject[] = [
   },
   {
     id: '2',
+    title: 'MCHAPP',
+    description: 'Comprehensive apartment management platform built with Node.js and Express. Enables integral management of apartments, smart devices (like Sonoff bulbs), users, and access logging with REST API communication.',
+    imageUrl: '/images/portfolio/logo my city home.jpeg',
+    imageHint: 'apartment management platform',
+    technologies: ['Node.js', 'Express', 'REST API', 'JavaScript', 'PostgreSQL', 'IoT Integration'],
+    liveDemoUrl: undefined,
+    repoUrl: undefined,
+    category: 'web-app',
+    status: 'completed',
+    metrics: {
+      linesOfCode: 4500,
+      developmentTime: '2 months',
+      teamSize: 8,
+      complexity: 'advanced'
+    },
+    highlights: [
+      'Smart device integration (Sonoff)',
+      'User authentication & authorization',
+      'Real-time apartment monitoring',
+      'Access control & logging',
+      'REST API architecture'
+    ]
+  },
+  {
+    id: '3',
+    title: 'Neonize',
+    description: 'WhatsApp automation system developed in Python for automated message sending. Integrated with PostgreSQL database for contact and message management and synchronization.',
+    imageUrl: '/images/portfolio/logo my city home.jpeg',
+    imageHint: 'whatsapp automation tool',
+    technologies: ['Python', 'PostgreSQL', 'WhatsApp API', 'Database Management', 'Automation'],
+    liveDemoUrl: undefined,
+    repoUrl: undefined,
+    category: 'api',
+    status: 'completed',
+    metrics: {
+      linesOfCode: 3200,
+      developmentTime: '1.5 months',
+      teamSize: 4,
+      complexity: 'advanced'
+    },
+    highlights: [
+      'WhatsApp API integration',
+      'Automated message scheduling',
+      'Contact database synchronization',
+      'Message delivery tracking',
+      'PostgreSQL data management'
+    ]
+  },
+  {
+    id: '4',
+    title: 'Omkrom API',
+    description: 'REST API backend developed in Swift with Vapor 4 framework. Uses PostgreSQL database with authentication, security, user management, email system and relational data architecture.',
+    imageUrl: '/images/portfolio/logo omkrom.jpeg',
+    imageHint: 'api backend system',
+    technologies: ['Swift', 'Vapor 4', 'PostgreSQL', 'REST API', 'Authentication', 'Email System'],
+    liveDemoUrl: undefined,
+    repoUrl: undefined,
+    category: 'api',
+    status: 'in-progress',
+    metrics: {
+      linesOfCode: 3800,
+      developmentTime: 'Ongoing',
+      teamSize: 3,
+      complexity: 'advanced'
+    },
+    highlights: [
+      'Swift Vapor 4 framework',
+      'JWT authentication & security',
+      'PostgreSQL relational architecture',
+      'User profile management',
+      'Hierarchical data endpoints',
+      'Email notification system'
+    ]
+  },
+  {
+    id: '5',
     title: 'Pokémon Project',
     description: 'Interactive Pokedex developed with React and API consumption, featuring an intuitive interface and advanced Pokémon search functionality.',
     imageUrl: '/images/projects/Pokemon.jpeg',
@@ -73,7 +149,7 @@ const projectsData: ExtendedProject[] = [
     ]
   },
   {
-    id: '3',
+    id: '6',
     title: 'Piano Simulator',
     description: 'Interactive virtual piano project that allows users to play notes and practice online with responsive design.',
     imageUrl: '/images/projects/Piano.jpeg',
@@ -105,6 +181,7 @@ export default function ProjectsSection() {
   const filterOptions = [
     { value: 'all', label: 'All Projects', icon: <Sparkles className="h-4 w-4" /> },
     { value: 'web-app', label: 'Web Apps', icon: <Code2 className="h-4 w-4" /> },
+    { value: 'api', label: 'APIs', icon: <GitBranch className="h-4 w-4" /> },
     { value: 'tool', label: 'Tools', icon: <Zap className="h-4 w-4" /> },
     { value: 'featured', label: 'Featured', icon: <Award className="h-4 w-4" /> },
   ];

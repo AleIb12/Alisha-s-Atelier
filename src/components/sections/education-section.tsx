@@ -9,41 +9,41 @@ import type { EducationItem } from '@/types';
 const educationData: EducationItem[] = [
   {
     id: '1',
-    title: 'Ciclo Formativo de Grado Superior',
-    specialization: 'Desarrollo de Aplicaciones Multiplataforma y Web',
+    title: 'Higher Level Training Cycle',
+    specialization: 'Multiplatform and Web Application Development',
     institution: 'Upgrade Hub',
     location: 'Madrid',
-    dateRange: 'Septiembre 2022 - Junio 2025',
-    status: 'Completado',
-    description: 'Diploma de Finalización de Estudios en Desarrollo de Aplicaciones Multiplataforma, obtenido tras completar satisfactoriamente el ciclo formativo de 2023 a 2025.',
-    skills: ['Java', 'Spring Framework', 'React.js', 'SQL', 'JavaScript', 'Figma', 'MongoDB', 'Desarrollo web', 'Comunicación', 'Compromiso', 'Gestión de redes', 'Odoo'],
+    dateRange: 'September 2022 - June 2025',
+    status: 'Completed',
+    description: 'Completion Diploma in Multiplatform Application Development, obtained after successfully completing the training cycle from 2023 to 2025.',
+    skills: ['Java', 'Spring Framework', 'React.js', 'SQL', 'JavaScript', 'Figma', 'MongoDB', 'Web Development', 'Communication', 'Commitment', 'Network Management', 'Odoo'],
     icon: <GraduationCap />,
     level: 'superior',
     certificateUrl: '/documents/Certificado upgrade.pdf'
   },
   {
     id: '2',
-    title: 'Ciclo Formativo de Grado Medio',
-    specialization: 'Sistemas Microinformáticos y Redes',
-    institution: 'Colegio María Inmaculada Fuencarral',
+    title: 'Mid-Level Training Cycle',
+    specialization: 'Microcomputer Systems and Networks',
+    institution: 'María Inmaculada Fuencarral School',
     location: 'Madrid',
-    dateRange: 'Septiembre 2020 - Junio 2022',
-    status: 'Completado',
-    description: 'Formación técnica especializada en administración de sistemas, redes y hardware informático.',
-    skills: ['Gestión de redes', 'Diseño de redes', 'Seguridad de redes', 'Redes inalámbricas', 'Montaje de hardware informático'],
+    dateRange: 'September 2020 - June 2022',
+    status: 'Completed',
+    description: 'Specialized technical training in system administration, networks and computer hardware.',
+    skills: ['Network Management', 'Network Design', 'Network Security', 'Wireless Networks', 'Computer Hardware Assembly'],
     icon: <BookOpen />,
     level: 'medio'
   },
   {
     id: '3',
-    title: 'Educación Secundaria Obligatoria (ESO)',
-    specialization: 'Ciencias',
-    institution: 'Colegio La Inmaculada',
+    title: 'Compulsory Secondary Education (ESO)',
+    specialization: 'Sciences',
+    institution: 'La Inmaculada School',
     location: 'Madrid',
-    dateRange: 'Septiembre 2017 - Junio 2020',
-    status: 'Completado',
-    description: 'Educación secundaria con especialización en ciencias, sentando las bases para el desarrollo técnico posterior.',
-    skills: ['Fundamentos científicos', 'Matemáticas', 'Física', 'Química', 'Tecnología'],
+    dateRange: 'September 2017 - June 2020',
+    status: 'Completed',
+    description: 'Secondary education with specialization in sciences, laying the foundations for subsequent technical development.',
+    skills: ['Scientific Foundations', 'Mathematics', 'Physics', 'Chemistry', 'Technology'],
     icon: <Award />,
     level: 'secundaria'
   }
@@ -53,9 +53,9 @@ export default function EducationSection() {
   return (
     <SectionWrapper 
       id="education" 
-      title="Trayectoria Educativa"
-      subtitle="Desde fundamentos científicos hasta desarrollo de aplicaciones multiplataforma, cada etapa ha construido mi base técnica y profesional."
-      badge="Formación Académica"
+      title="Educational Journey"
+      subtitle="From scientific foundations to multiplatform application development, each stage has built my technical and professional foundation."
+      badge="Academic Background"
       showScrollIndicator={true}
       className="bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 dark:from-blue-950/20 dark:via-indigo-950/20 dark:to-purple-950/20 relative overflow-hidden"
     >
@@ -122,9 +122,9 @@ export default function EducationSection() {
                       item.level === 'medio' ? 'bg-gradient-to-r from-blue-100 to-indigo-100 text-blue-700 dark:from-blue-900/30 dark:to-indigo-900/30 dark:text-blue-300' :
                       'bg-gradient-to-r from-purple-100 to-pink-100 text-purple-700 dark:from-purple-900/30 dark:to-pink-900/30 dark:text-purple-300'
                     }`}>
-                      {item.level === 'superior' ? '🎓 Grado Superior' : 
-                       item.level === 'medio' ? '📚 Grado Medio' : 
-                       '🏫 Educación Secundaria'}
+                      {item.level === 'superior' ? '🎓 Higher Level' : 
+                       item.level === 'medio' ? '📚 Mid Level' : 
+                       '🏫 Secondary Education'}
                     </div>
                   </div>
 
@@ -168,7 +168,7 @@ export default function EducationSection() {
                     <div className="space-y-3">
                       <div className="flex items-center space-x-2">
                         <BookOpen className="h-5 w-5 text-indigo-600 dark:text-indigo-400" />
-                        <h4 className="font-semibold text-gray-800 dark:text-gray-200">Descripción</h4>
+                        <h4 className="font-semibold text-gray-800 dark:text-gray-200">Description</h4>
                       </div>
                       <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
                         {item.description}
@@ -180,7 +180,7 @@ export default function EducationSection() {
                       <div className="space-y-3">
                         <div className="flex items-center space-x-2">
                           <Award className="h-5 w-5 text-yellow-600 dark:text-yellow-400" />
-                          <h4 className="font-semibold text-gray-800 dark:text-gray-200">Aptitudes y Conocimientos</h4>
+                          <h4 className="font-semibold text-gray-800 dark:text-gray-200">Skills and Knowledge</h4>
                         </div>
                         <div className="flex flex-wrap gap-2">
                           {item.skills.map((skill: string, skillIndex: number) => (
@@ -214,7 +214,7 @@ export default function EducationSection() {
                       <div className="space-y-3">
                         <div className="flex items-center space-x-2">
                           <Download className="h-5 w-5 text-green-600 dark:text-green-400" />
-                          <h4 className="font-semibold text-gray-800 dark:text-gray-200">Certificado</h4>
+                          <h4 className="font-semibold text-gray-800 dark:text-gray-200">Certificate</h4>
                         </div>
                         <Button 
                           asChild 
@@ -228,7 +228,7 @@ export default function EducationSection() {
                           <a href={item.certificateUrl} download target="_blank" rel="noopener noreferrer">
                             <div className="flex items-center justify-center space-x-2 text-white">
                               <Download className="h-4 w-4 group-hover:animate-bounce" />
-                              <span className="font-medium">Descargar Certificado</span>
+                              <span className="font-medium">Download Certificate</span>
                             </div>
                             <div className="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                           </a>
@@ -248,19 +248,19 @@ export default function EducationSection() {
             {[
               { 
                 number: "3", 
-                label: "Niveles Educativos", 
+                label: "Educational Levels", 
                 icon: <GraduationCap className="h-6 w-6" />,
                 gradient: "from-blue-500 to-indigo-500"
               },
               { 
                 number: "8", 
-                label: "Años de Formación", 
+                label: "Years of Training", 
                 icon: <Calendar className="h-6 w-6" />,
                 gradient: "from-indigo-500 to-purple-500"
               },
               { 
                 number: "17", 
-                label: "Tecnologías Aprendidas", 
+                label: "Technologies Learned", 
                 icon: <Award className="h-6 w-6" />,
                 gradient: "from-purple-500 to-blue-500"
               }
