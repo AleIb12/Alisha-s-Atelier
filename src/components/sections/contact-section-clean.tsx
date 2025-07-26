@@ -48,7 +48,7 @@ export default function ContactSection() {
       description: "Connect with me on professional networks",
       icon: <Linkedin className="h-5 w-5" />,
       action: "View Profile",
-      href: "https://linkedin.com/in/alisha-ibarra"
+      href: "https://www.linkedin.com/in/alisha-ibarra-bello-4526561b6"
     },
     {
       id: '3',

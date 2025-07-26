@@ -411,7 +411,7 @@ export const metadata: Metadata = {
 
 ### **Alisha Ibarra Bello**
 - 📧 **Email**: [ibarrabelloalisha@gmail.com](mailto:ibarrabelloalisha@gmail.com)
-- 💼 **LinkedIn**: [linkedin.com/in/alisha-ibarra](https://linkedin.com/in/alisha-ibarra)
+- 💼 **LinkedIn**: [linkedin.com/in/alisha-ibarra-bello-4526561b6](https://www.linkedin.com/in/alisha-ibarra-bello-4526561b6)
 - 🐙 **GitHub**: [github.com/AleIb12](https://github.com/AleIb12)
 - 📱 **WhatsApp**: [+34 692 616 005](https://wa.me/34692616005)
 - 📲 **Telegram**: [@Alisha_Ibarra](https://t.me/Alisha_Ibarra)
