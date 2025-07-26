@@ -158,7 +158,7 @@ export default function ExperienceSection() {
         <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8 pt-12 border-t border-border">
           <div className="text-center space-y-2">
             <div className="text-2xl font-medium text-foreground">1</div>
-            <div className="text-sm text-muted-foreground">Year Experience</div>
+            <div className="text-sm text-muted-foreground">Years Experience</div>
           </div>
           <div className="text-center space-y-2">
             <div className="text-2xl font-medium text-foreground">15+</div>
