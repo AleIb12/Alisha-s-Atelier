@@ -15,10 +15,26 @@ const navigation = [
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState('profile');
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
+      
+      // Update active section based on scroll position
+      const sections = navigation.map(item => item.href.slice(1));
+      const currentSection = sections.find(section => {
+        const element = document.getElementById(section);
+        if (element) {
+          const rect = element.getBoundingClientRect();
+          return rect.top <= 100 && rect.bottom >= 100;
+        }
+        return false;
+      });
+      
+      if (currentSection) {
+        setActiveSection(currentSection);
+      }
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -35,44 +51,69 @@ export default function Header() {
 
   return (
     <header 
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         isScrolled 
-          ? 'bg-background/80 backdrop-blur-md border-b border-border' 
+          ? 'bg-background/95 backdrop-blur-xl border-b border-border/50 shadow-lg shadow-black/5' 
           : 'bg-transparent'
       }`}
     >
       <div className="max-w-6xl mx-auto px-6">
-        <div className="flex items-center justify-between h-16">
-          {/* Logo */}
+        <div className="flex items-center justify-between h-20">
+          {/* Enhanced Logo */}
           <Link 
             href="#profile" 
             onClick={(e) => {
               e.preventDefault();
               scrollToSection('#profile');
             }}
-            className="text-xl font-medium text-foreground hover:text-muted-foreground transition-colors duration-200"
+            className="group flex items-center gap-3"
           >
-            Alisha Ibarra
+            {/* Logo icon */}
+            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-foreground to-foreground/80 flex items-center justify-center text-background font-bold text-lg shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-105">
+              A
+            </div>
+            <span className="text-xl font-bold text-foreground group-hover:text-foreground/80 transition-colors duration-300">
+              Alisha Ibarra
+            </span>
           </Link>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
-            {navigation.map((item) => (
-              <button
-                key={item.name}
-                onClick={() => scrollToSection(item.href)}
-                className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors duration-200 relative group"
-              >
-                {item.name}
-                <span className="absolute -bottom-1 left-0 w-0 h-px bg-foreground transition-all duration-200 group-hover:w-full"></span>
-              </button>
-            ))}
+          {/* Enhanced Desktop Navigation */}
+          <nav className="hidden md:flex items-center">
+            <div className="flex items-center bg-muted/30 backdrop-blur-sm rounded-2xl p-2 border border-border/30 shadow-lg">
+              {navigation.map((item, index) => {
+                const isActive = activeSection === item.href.slice(1);
+                return (
+                  <button
+                    key={item.name}
+                    onClick={() => scrollToSection(item.href)}
+                    className={`relative px-4 py-2.5 text-sm font-semibold rounded-xl transition-all duration-300 ${
+                      isActive
+                        ? 'bg-background text-foreground shadow-md border border-border/50'
+                        : 'text-foreground/60 hover:text-foreground hover:bg-background/50'
+                    }`}
+                  >
+                    {item.name}
+                    {isActive && (
+                      <div className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-1 h-1 bg-foreground rounded-full"></div>
+                    )}
+                  </button>
+                );
+              })}
+            </div>
+
+            {/* CTA Button */}
+            <button
+              onClick={() => scrollToSection('#contact')}
+              className="ml-6 px-6 py-2.5 bg-foreground text-background text-sm font-semibold rounded-xl hover:bg-foreground/90 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
+            >
+              Let's Talk ✨
+            </button>
           </nav>
 
-          {/* Mobile Menu Button */}
+          {/* Enhanced Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="md:hidden p-2 text-foreground hover:text-muted-foreground transition-colors duration-200"
+            className="md:hidden relative p-3 rounded-xl bg-muted/30 backdrop-blur-sm border border-border/30 text-foreground hover:bg-muted/50 transition-all duration-300 hover:scale-105 shadow-lg"
             aria-label="Toggle menu"
           >
             {isMobileMenuOpen ? (
@@ -83,20 +124,43 @@ export default function Header() {
           </button>
         </div>
 
-        {/* Mobile Navigation */}
+        {/* Enhanced Mobile Navigation */}
         {isMobileMenuOpen && (
-          <div className="md:hidden py-4 border-t border-border animate-fade-in">
-            <nav className="flex flex-col space-y-4">
-              {navigation.map((item) => (
+          <div className="md:hidden pb-6 animate-fade-in">
+            <div className="mt-4 bg-background/95 backdrop-blur-xl rounded-2xl border border-border/50 shadow-xl overflow-hidden">
+              <nav className="p-2">
+                {navigation.map((item, index) => {
+                  const isActive = activeSection === item.href.slice(1);
+                  return (
+                    <button
+                      key={item.name}
+                      onClick={() => scrollToSection(item.href)}
+                      className={`w-full text-left px-4 py-3 text-sm font-semibold rounded-xl transition-all duration-300 flex items-center justify-between group ${
+                        isActive
+                          ? 'bg-foreground text-background shadow-md'
+                          : 'text-foreground/70 hover:text-foreground hover:bg-muted/50'
+                      }`}
+                      style={{ animationDelay: `${index * 0.1}s` }}
+                    >
+                      {item.name}
+                      <div className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                        isActive ? 'bg-background' : 'bg-transparent group-hover:bg-foreground/30'
+                      }`}></div>
+                    </button>
+                  );
+                })}
+              </nav>
+              
+              {/* Mobile CTA */}
+              <div className="p-2 border-t border-border/50">
                 <button
-                  key={item.name}
-                  onClick={() => scrollToSection(item.href)}
-                  className="text-left text-sm font-medium text-muted-foreground hover:text-foreground transition-colors duration-200 py-2"
+                  onClick={() => scrollToSection('#contact')}
+                  className="w-full px-4 py-3 bg-foreground text-background text-sm font-semibold rounded-xl hover:bg-foreground/90 transition-all duration-300 flex items-center justify-center gap-2"
                 >
-                  {item.name}
+                  Let's Talk ✨
                 </button>
-              ))}
-            </nav>
+              </div>
+            </div>
           </div>
         )}
       </div>

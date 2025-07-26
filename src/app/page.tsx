@@ -42,7 +42,7 @@ export default function HomePage() {
       {/* Clean content layout */}
       <div className="relative z-10">
         <Header />
-        <main className="container mx-auto px-6 space-y-32 py-16">
+        <main className="container mx-auto px-6 space-y-32 py-16 pt-28">
           <ProfileSection />
           <ProjectsSection />
           <ExperienceSection />
