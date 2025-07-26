@@ -68,15 +68,15 @@ export default function ProfileSection() {
 
             {/* Actions */}
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link href="#contact">
-                <button className="minimal-button group">
+                            <Link href="#contact">
+                <button className="minimal-button group animate-glow hover:scale-105 transition-all duration-300">
                   Let's work together
-                  <ArrowRight className="h-4 w-4 ml-2 group-hover:translate-x-0.5 transition-transform duration-200" />
+                  <ArrowRight className="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform duration-200" />
                 </button>
               </Link>
-              <a href="/documents/cv/CurriculumAlisha.pdf" download>
-                <button className="minimal-button minimal-button-ghost">
-                  <Download className="h-4 w-4 mr-2" />
+              <a href="/documents/cv/AlishaCvP.pdf" download>
+                <button className="minimal-button minimal-button-ghost group hover:scale-105 transition-all duration-300">
+                  <Download className="h-4 w-4 mr-2 group-hover:scale-110 transition-transform duration-200" />
                   Download CV
                 </button>
               </a>
