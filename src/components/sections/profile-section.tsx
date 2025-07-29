@@ -5,13 +5,14 @@ import { Download, ArrowRight, MapPin, Calendar } from 'lucide-react';
 export default function ProfileSection() {
   const skills = [
     'React', 'Next.js', 'TypeScript', 'JavaScript', 'Java', 'Spring',
-    'Node.js', 'PostgreSQL', 'MongoDB', 'Tailwind CSS', 'Figma', 'Git'
+    'Node.js', 'PostgreSQL', 'MongoDB', 'Tailwind CSS', 'Figma', 'Git',
+    'Genkit', 'Python', 'Angular', 'Vaadin', 'NoSQL'
   ];
 
   const stats = [
     { label: 'Years Experience', value: '1' },
     { label: 'Projects Completed', value: '15+' },
-    { label: 'Technologies', value: '12+' },
+    { label: 'Technologies', value: '17+' },
     { label: 'Client Satisfaction', value: '100%' }
   ];
 

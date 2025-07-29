@@ -18,13 +18,13 @@ const education: Education[] = [
   {
     id: '1',
     degree: 'Higher Level Training Cycle',
-    specialization: 'Multiplatform and Web Application Development',
+    specialization: 'Multiplatform Application Development',
     institution: 'Upgrade Hub',
     location: 'Madrid',
     period: 'September 2022 - June 2025',
     status: 'completed',
-    description: 'Comprehensive training in full-stack development, covering both frontend and backend technologies, database management, and modern development practices.',
-    skills: ['Java', 'Spring Framework', 'React.js', 'SQL', 'JavaScript', 'Figma', 'MongoDB', 'Web Development'],
+    description: 'Comprehensive training in multiplatform development, covering both frontend and backend technologies, database management, and modern development practices.',
+    skills: ['Java', 'Spring Framework', 'React.js', 'SQL', 'JavaScript', 'Figma', 'MongoDB'],
     level: 'superior',
     certificateUrl: '/documents/Certificado upgrade.pdf'
   },
