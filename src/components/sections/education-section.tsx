@@ -24,7 +24,7 @@ const education: Education[] = [
     period: 'September 2022 - June 2025',
     status: 'completed',
     description: 'Comprehensive training in multiplatform development, covering both frontend and backend technologies, database management, and modern development practices.',
-    skills: ['Java', 'Spring Framework', 'React.js', 'SQL', 'JavaScript', 'Figma', 'MongoDB'],
+    skills: ['Java', 'Spring Framework', 'React.js', 'SQL', 'JavaScript', 'Figma', 'MongoDB', 'Android Development', 'Canva', 'Spring Boot', 'Markdown', 'Firebase'],
     level: 'superior',
     certificateUrl: '/documents/Certificado upgrade.pdf'
   },

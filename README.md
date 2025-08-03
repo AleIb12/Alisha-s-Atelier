@@ -13,25 +13,29 @@ Un portfolio ultra-minimal y elegante desarrollado con Next.js 15, TypeScript y 
 
 🌐 **[Ver Portfolio Live](https://alisha-s-atelier.vercel.app)** ✨
 
-## ✨ Nuevas Características v4.0
+## ✨ Nuevas Características v5.0
 
-### 🎨 **Sistema de Diseño Mejorado**
-- **Contraste Tipográfico Enhanced**: Font-weights optimizados (600-700) para mejor legibilidad
-- **Cartas Premium**: Bordes redondeados amplios (1rem), sombras profundas y efectos hover elegantes
-- **Navegación Premium**: Diseño tipo "pill" con backdrop blur y detección automática de sección activa
-- **Micro-animaciones**: Transiciones fluidas de 300-500ms para experiencia premium
+### � **Stack Tecnológico Actualizado**
+- **21+ Tecnologías**: React, Next.js, TypeScript, JavaScript, Java, Spring, JavaFX, Node.js, Python, Angular, Vaadin, Bootstrap, Genkit, PostgreSQL, MongoDB, NoSQL, Firebase, Tailwind CSS, Figma, Canva, DaVinci Resolve, Git
+- **Diseño y Video**: Expertise en UI/UX con Bootstrap, Figma, Canva, y edición profesional con DaVinci Resolve
+- **Java Ecosystem**: Desarrollo completo con Java, Spring Framework, JavaFX para interfaces
 
-### 🧭 **Navegación Revolucionada**
-- **Header Premium**: Diseño con logo icónico "A" y navegación tipo pill elegante
-- **Active Section Detection**: Detección automática de sección actual con indicadores visuales
-- **Mobile Menu Enhanced**: Menú desplegable tipo card con animaciones escalonadas
-- **CTA Button**: Botón "Let's Talk ✨" destacado para conversiones
+### 📚 **Educación Actualizada**
+- **Multiplatform Application Development**: Especialización corregida (no Web Development)
+- **Habilidades Ampliadas**: Android Development, Spring Boot, Markdown, Firebase añadidos a la formación
+- **Tech Stack Educativo**: Java, Spring Framework, React.js, SQL, JavaScript, Figma, MongoDB, Android Development, Canva, Spring Boot, Markdown, Firebase
 
-### 💎 **UI/UX Refinements**
-- **Enhanced Cards**: Gradientes sutiles, sombras mejoradas y efectos glow en hover
-- **Timeline Mejorada**: Marcadores más grandes (12x12px) con efectos de profundidad
-- **Badges Premium**: Mejor contraste, bordes definidos y estados animados
-- **Pills Metadata**: Información en contenedores redondeados con fondo semitransparente
+### 📞 **Contacto Rediseñado**
+- **Sección Simplificada**: Eliminado formulario complejo, enfoque en "Get in Touch"
+- **Cards Ultra-Minimal**: Diseño coherente con la temática de la página
+- **Información Clara**: Available Now, Quick Response (24h), Global Remote (Madrid, Spain)
+- **Interacciones Elegantes**: Hover effects sutiles con colores que aparecen solo en interacción
+
+### 🎨 **Mejoras de Diseño Premium**
+- **Cards Coherentes**: Diseño que coincide perfectamente con la temática ultra-minimal
+- **Footer Mejorado**: Layout premium con logo, navegación organizada y tech stack badges
+- **Navegación Corregida**: Enlaces del footer correctamente mapeados a las secciones reales
+- **Micro-animaciones**: Efectos hover profesionales y transiciones suaves
 
 ## 🏗️ Arquitectura del Proyecto
 
@@ -79,9 +83,40 @@ Shadcn UI              // Component library premium
 
 // Enhanced Features
 Lucide React           // Premium icon system
-Framer Motion          // Smooth animations
 React Hook Form        // Form management
 Zod                    // Schema validation
+EmailJS               // Contact form integration
+```
+
+### **Technology Stack Completo**
+```javascript
+// Frontend Development
+const frontend = [
+  'React', 'Next.js', 'TypeScript', 'JavaScript', 'Angular', 
+  'Tailwind CSS', 'Bootstrap', 'HTML/CSS'
+];
+
+// Backend Development  
+const backend = [
+  'Node.js', 'Java', 'Spring Framework', 'Spring Boot', 
+  'Python', 'Swift', 'Vapor'
+];
+
+// Databases & Storage
+const databases = [
+  'PostgreSQL', 'MongoDB', 'Firebase', 'NoSQL', 'SQL'
+];
+
+// Tools & Frameworks
+const tools = [
+  'Git', 'Figma', 'Canva', 'DaVinci Resolve', 'JavaFX', 
+  'Vaadin', 'Genkit', 'Markdown'
+];
+
+// Mobile & Platform Development
+const platforms = [
+  'Android Development', 'Multiplatform Apps', 'Web Apps', 'REST APIs'
+];
 ```
 
 ### **Design System Evolution**
@@ -638,16 +673,18 @@ export const metadata: Metadata = {
 
 ## 📊 Métricas del Proyecto
 
-### **Estadísticas Actuales**
+### **Estadísticas Actuales v5.0**
 - 📁 **6 Proyectos** principales showcased (3 profesionales, 3 personales)
-- 💻 **21,000+ líneas** de código TypeScript/TSX/Python/Node.js/Swift
-- 🛠️ **20+ tecnologías** diferentes utilizadas en proyectos
+- 💻 **21,000+ líneas** de código TypeScript/TSX/Python/Node.js/Swift/Java
+- 🛠️ **21+ tecnologías** diferentes utilizadas en proyectos
 - ⭐ **1 proyecto destacado** (Health Mobile)
 - 🏢 **3 proyectos profesionales** activos (MCHAPP, Neonize, Omkrom API)
 - 🎨 **25+ componentes** Shadcn UI integrados con diseño minimal
 - 📱 **100% responsive** con diseño ultra-minimal en todos los dispositivos
 - 💼 **1 año de experiencia** profesional documentada
-- 🎓 **3 niveles educativos** completados (Grado Superior, Medio, Secundaria)
+- 🎓 **3 niveles educativos** completados (Multiplatform Development, Redes, Ciencias)
+- 🎨 **Diseño y Video**: UI/UX design con Figma, Canva, y edición con DaVinci Resolve
+- ☕ **Java Ecosystem**: Desarrollo completo con Java, Spring, JavaFX para interfaces
 
 ### **Performance Metrics**
 - ⚡ **95+ Lighthouse Score** en todas las categorías
@@ -823,15 +860,15 @@ Proyectos destacados con demos en vivo y código fuente:
 #### 🎓 Formación Académica Destacada:
 
 **Upgrade Hub (Septiembre 2022 - Junio 2025)** - Ciclo Formativo Grado Superior
-- **Especialización**: Desarrollo de Aplicaciones Multiplataforma y Web
-- **Stack**: Java, Spring Framework, React.js, SQL, JavaScript, Figma, MongoDB, Odoo
-- **Aptitudes**: Comunicación, Compromiso, Gestión de redes, Desarrollo web
+- **Especialización**: Desarrollo de Aplicaciones Multiplataforma
+- **Stack**: Java, Spring Framework, React.js, SQL, JavaScript, Figma, MongoDB, Android Development, Canva, Spring Boot, Markdown, Firebase
+- **Aptitudes**: Desarrollo multiplatforma, Comunicación, Compromiso, Gestión de bases de datos
 - **Certificado**: Descarga disponible del certificado oficial
 - **Status**: 🎓 Grado Superior Completado
 
 **Colegio María Inmaculada Fuencarral (Septiembre 2020 - Junio 2022)** - Ciclo Formativo Grado Medio
 - **Especialización**: Sistemas Microinformáticos y Redes
-- **Stack**: Gestión de redes, Diseño de redes, Seguridad de redes, Redes inalámbricas
+- **Stack**: Gestión de redes, Diseño de redes, Seguridad de redes, Redes inalámbricas, Hardware
 - **Aptitudes**: Montaje de hardware informático, Administración de sistemas
 - **Status**: 📚 Grado Medio Completado
 
@@ -981,15 +1018,16 @@ Este portfolio es un ejemplo de cómo crear experiencias web profesionales, eleg
 
 ---
 
-*"Simplicity is the ultimate sophistication"* - Leonardo da Vinci �✨
+*"Simplicity is the ultimate sophistication"* - Leonardo da Vinci ✨
 
-**Portfolio Version**: 3.0 Ultra-Minimal ✨  
-**Última actualización**: Julio 2025  
-**Diseño**: Ultra-minimal monochrome con paleta de grises refinada  
-**Stack actualizado**: JavaScript, HTML, CSS, SQL, Java, Python, Swift, NoSQL  
-**Proyectos añadidos**: MCHAPP, Neonize, Omkrom API (3 proyectos profesionales)  
-**Experiencia actualizada**: 1 año de experiencia profesional documentada  
-**Nueva característica**: Favicon ultra-minimal con letra A geométrica  
-**Favicon optimizado**: Paleta monochrome con archivos optimizados  
-**Performance**: Bundle size reducido y carga ultra-rápida  
-**Estado**: Portfolio profesional con diseño ultra-minimal refinado �
+**Portfolio Version**: 5.0 Ultra-Minimal Enhanced ✨  
+**Última actualización**: Agosto 2025  
+**Diseño**: Ultra-minimal monochrome con paleta de grises refinada y cards coherentes  
+**Stack actualizado**: 21+ tecnologías incluyendo Java ecosystem, diseño y video editing  
+**Nuevas tecnologías**: JavaFX, Bootstrap, Canva, DaVinci Resolve, Android Development, Spring Boot, Firebase  
+**Educación corregida**: Desarrollo de Aplicaciones Multiplataforma (no Web Development)  
+**Contacto mejorado**: Sección simplificada sin formulario, diseño coherente con tema  
+**Footer premium**: Navegación corregida, tech stack badges, diseño moderno  
+**Cards rediseñadas**: Disponibilidad, respuesta y ubicación con hover effects sutiles  
+**Performance**: Bundle optimizado, navegación corregida, experiencia mejorada  
+**Estado**: Portfolio profesional con stack completo y diseño ultra-minimal coherente ✨

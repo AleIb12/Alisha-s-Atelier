@@ -1,9 +1,8 @@
 "use client";
 
-import React, { useState } from 'react';
-import { Mail, MessageCircle, Send, User, Copy, ExternalLink, Clock, CheckCircle, Linkedin, Github } from 'lucide-react';
+import React from 'react';
+import { Mail, Copy, ExternalLink, CheckCircle, Linkedin, Github, MapPin, Clock, Globe } from 'lucide-react';
 import { useToast } from "@/hooks/use-toast";
-import { sendEmail, createEmailParams, isValidEmail } from '@/lib/email-template';
 
 interface ContactMethod {
   id: string;
@@ -16,26 +15,14 @@ interface ContactMethod {
   primary?: boolean;
 }
 
-interface FormData {
-  name: string;
-  email: string;
-  message: string;
-}
-
 export default function ContactSection() {
   const { toast } = useToast();
-  const [formData, setFormData] = useState<FormData>({
-    name: '',
-    email: '',
-    message: ''
-  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const contactMethods: ContactMethod[] = [
     {
       id: '1',
       title: "Email",
-      description: "Best way to reach me for professional inquiries",
+      description: "Best way to reach me for professional inquiries and collaborations",
       icon: <Mail className="h-5 w-5" />,
       action: "Send Email",
       href: "mailto:ibarrabelloalisha@gmail.com",
@@ -45,7 +32,7 @@ export default function ContactSection() {
     {
       id: '2', 
       title: "LinkedIn",
-      description: "Connect with me on professional networks",
+      description: "Connect with me professionally and see my experience",
       icon: <Linkedin className="h-5 w-5" />,
       action: "View Profile",
       href: "https://www.linkedin.com/in/alisha-ibarra-bello-4526561b6"
@@ -53,16 +40,12 @@ export default function ContactSection() {
     {
       id: '3',
       title: "GitHub",
-      description: "Check out my code and open source contributions",
+      description: "Explore my code, projects and open source contributions",
       icon: <Github className="h-5 w-5" />,
       action: "View Projects",
       href: "https://github.com/AleIb12"
     }
   ];
-
-  const handleInputChange = (field: keyof FormData, value: string) => {
-    setFormData(prev => ({ ...prev, [field]: value }));
-  };
 
   const handleCopyToClipboard = async (text: string, label: string) => {
     try {
@@ -82,60 +65,6 @@ export default function ContactSection() {
     }
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    
-    if (!formData.name.trim() || !formData.email.trim() || !formData.message.trim()) {
-      toast({
-        title: "Missing Information",
-        description: "Please fill in all fields.",
-        variant: "destructive",
-        duration: 4000,
-      });
-      return;
-    }
-
-    if (!isValidEmail(formData.email)) {
-      toast({
-        title: "Invalid Email",
-        description: "Please enter a valid email address.",
-        variant: "destructive",
-        duration: 4000,
-      });
-      return;
-    }
-
-    setIsSubmitting(true);
-
-    try {
-      const emailParams = createEmailParams(
-        formData.name,
-        formData.email,
-        formData.message
-      );
-
-      await sendEmail(emailParams);
-      
-      toast({
-        title: "Message Sent!",
-        description: "Thank you for reaching out. I'll get back to you soon.",
-        duration: 5000,
-      });
-
-      setFormData({ name: '', email: '', message: '' });
-    } catch (error) {
-      console.error('Error sending email:', error);
-      toast({
-        title: "Failed to Send",
-        description: "Please try again or contact me directly.",
-        variant: "destructive",
-        duration: 5000,
-      });
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
-
   return (
     <section id="contact" className="section-container">
       <div className="section-content">
@@ -148,45 +77,52 @@ export default function ContactSection() {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-16">
-          {/* Contact Methods */}
-          <div className="space-y-8">
-            <div className="space-y-6">
-              <h3 className="text-2xl font-medium text-foreground">
+        {/* Enhanced Get in Touch Section */}
+        <div className="max-w-4xl mx-auto">
+          <div className="space-y-12">
+            {/* Introduction */}
+            <div className="text-center space-y-6">
+              <h3 className="text-3xl font-medium text-foreground">
                 Get in Touch
               </h3>
-              <p className="text-muted-foreground leading-relaxed">
+              <p className="text-lg text-muted-foreground leading-relaxed max-w-2xl mx-auto">
                 I'm always open to discussing new opportunities, interesting projects,
-                or just having a conversation about technology and development.
+                or just having a conversation about technology and development. Whether you have
+                a project in mind or want to explore possibilities, I'd love to hear from you.
               </p>
             </div>
 
-            <div className="space-y-4">
+            {/* Contact Methods Grid */}
+            <div className="grid md:grid-cols-3 gap-6">
               {contactMethods.map((method) => (
-                <div key={method.id} className="minimal-card">
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-4">
-                      <div className={`w-12 h-12 rounded-lg flex items-center justify-center ${
-                        method.primary ? 'bg-primary text-primary-foreground' : 'bg-muted text-muted-foreground'
-                      }`}>
-                        {method.icon}
-                      </div>
-                      <div>
-                        <h4 className="font-medium text-foreground">
-                          {method.title}
-                        </h4>
-                        <p className="text-sm text-muted-foreground">
-                          {method.description}
-                        </p>
-                      </div>
+                <div key={method.id} className="minimal-card hover-lift group">
+                  <div className="text-center space-y-6">
+                    {/* Icon */}
+                    <div className={`mx-auto w-16 h-16 rounded-2xl flex items-center justify-center transition-colors duration-300 ${
+                      method.primary 
+                        ? 'bg-primary text-primary-foreground group-hover:bg-primary/90' 
+                        : 'bg-muted text-muted-foreground group-hover:bg-primary group-hover:text-primary-foreground'
+                    }`}>
+                      {method.icon}
                     </div>
 
-                    <div className="flex gap-2">
+                    {/* Content */}
+                    <div className="space-y-3">
+                      <h4 className="text-xl font-medium text-foreground">
+                        {method.title}
+                      </h4>
+                      <p className="text-sm text-muted-foreground leading-relaxed">
+                        {method.description}
+                      </p>
+                    </div>
+
+                    {/* Actions */}
+                    <div className="flex flex-col gap-3">
                       <a
                         href={method.href}
                         target={method.href.startsWith('http') ? '_blank' : '_self'}
                         rel={method.href.startsWith('http') ? 'noopener noreferrer' : ''}
-                        className="minimal-button minimal-button-ghost text-sm"
+                        className="minimal-button group-hover:scale-105 transition-transform duration-200"
                       >
                         <ExternalLink className="h-4 w-4 mr-2" />
                         {method.action}
@@ -194,9 +130,10 @@ export default function ContactSection() {
                       {method.copyText && (
                         <button
                           onClick={() => handleCopyToClipboard(method.copyText!, method.title)}
-                          className="minimal-button minimal-button-ghost text-sm px-3"
+                          className="minimal-button minimal-button-ghost text-sm"
                         >
-                          <Copy className="h-4 w-4" />
+                          <Copy className="h-4 w-4 mr-2" />
+                          Copy {method.title}
                         </button>
                       )}
                     </div>
@@ -205,96 +142,74 @@ export default function ContactSection() {
               ))}
             </div>
 
-            {/* Availability */}
-            <div className="minimal-card bg-primary/5 border-primary/20">
-              <div className="flex items-center gap-3">
-                <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
-                <div>
-                  <p className="font-medium text-foreground">Available for new projects</p>
-                  <p className="text-sm text-muted-foreground">
-                    Typically respond within 24 hours
-                  </p>
+            {/* Additional Info */}
+            <div className="grid md:grid-cols-3 gap-6 pt-12 border-t border-border">
+              {/* Availability */}
+              <div className="minimal-card group hover-lift">
+                <div className="text-center space-y-4">
+                  <div className="relative mx-auto w-12 h-12 rounded-2xl bg-background border border-border flex items-center justify-center group-hover:border-green-300 transition-colors duration-300">
+                    <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
+                    <div className="absolute inset-0 bg-green-500/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  </div>
+                  <div className="space-y-1">
+                    <p className="font-semibold text-foreground">Available Now</p>
+                    <p className="text-sm text-muted-foreground">
+                      Ready for new projects
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Response Time */}
+              <div className="minimal-card group hover-lift">
+                <div className="text-center space-y-4">
+                  <div className="relative mx-auto w-12 h-12 rounded-2xl bg-background border border-border flex items-center justify-center group-hover:border-blue-300 transition-colors duration-300">
+                    <Clock className="h-5 w-5 text-muted-foreground group-hover:text-blue-600 transition-colors duration-300" />
+                    <div className="absolute inset-0 bg-blue-500/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  </div>
+                  <div className="space-y-1">
+                    <p className="font-semibold text-foreground">Quick Response</p>
+                    <p className="text-sm text-muted-foreground">
+                      Within 24 hours
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Location */}
+              <div className="minimal-card group hover-lift">
+                <div className="text-center space-y-4">
+                  <div className="relative mx-auto w-12 h-12 rounded-2xl bg-background border border-border flex items-center justify-center group-hover:border-purple-300 transition-colors duration-300">
+                    <Globe className="h-5 w-5 text-muted-foreground group-hover:text-purple-600 transition-colors duration-300" />
+                    <div className="absolute inset-0 bg-purple-500/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  </div>
+                  <div className="space-y-1">
+                    <p className="font-semibold text-foreground">Global Remote</p>
+                    <p className="text-sm text-muted-foreground">
+                      Based in Madrid, Spain
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
 
-          {/* Contact Form */}
-          <div className="minimal-card">
-            <div className="space-y-6">
-              <div>
-                <h3 className="text-xl font-medium text-foreground mb-2">
-                  Send a Message
-                </h3>
-                <p className="text-muted-foreground text-sm">
-                  Have a specific project in mind? Fill out the form and I'll get back to you.
+            {/* Call to Action */}
+            <div className="text-center space-y-6 pt-8">
+              <div className="space-y-3">
+                <h4 className="text-2xl font-medium text-foreground">
+                  Ready to Start Your Project?
+                </h4>
+                <p className="text-muted-foreground">
+                  Let's turn your ideas into reality. I'm here to help you build something amazing.
                 </p>
               </div>
-
-              <form onSubmit={handleSubmit} className="space-y-4">
-                <div className="space-y-2">
-                  <label className="text-sm font-medium text-foreground">
-                    Name
-                  </label>
-                  <input
-                    type="text"
-                    placeholder="Your name"
-                    value={formData.name}
-                    onChange={(e) => handleInputChange('name', e.target.value)}
-                    className="minimal-input"
-                    required
-                  />
-                </div>
-
-                <div className="space-y-2">
-                  <label className="text-sm font-medium text-foreground">
-                    Email
-                  </label>
-                  <input
-                    type="email"
-                    placeholder="your.email@domain.com"
-                    value={formData.email}
-                    onChange={(e) => handleInputChange('email', e.target.value)}
-                    className="minimal-input"
-                    required
-                  />
-                </div>
-
-                <div className="space-y-2">
-                  <label className="text-sm font-medium text-foreground">
-                    Message
-                  </label>
-                  <textarea
-                    placeholder="Tell me about your project..."
-                    value={formData.message}
-                    onChange={(e) => handleInputChange('message', e.target.value)}
-                    className="minimal-input min-h-[120px] resize-y"
-                    required
-                  />
-                </div>
-
-                <button
-                  type="submit"
-                  disabled={isSubmitting}
-                  className="w-full minimal-button"
-                >
-                  {isSubmitting ? (
-                    <>
-                      <div className="h-4 w-4 mr-2 animate-spin rounded-full border-2 border-primary-foreground border-t-transparent" />
-                      Sending...
-                    </>
-                  ) : (
-                    <>
-                      <Send className="h-4 w-4 mr-2" />
-                      Send Message
-                    </>
-                  )}
-                </button>
-
-                <p className="text-xs text-muted-foreground text-center">
-                  Your message will be sent directly to my email.
-                </p>
-              </form>
+              <a
+                href="mailto:ibarrabelloalisha@gmail.com"
+                className="minimal-button text-lg px-8 py-3 animate-glow hover:scale-105 transition-all duration-300 inline-flex"
+              >
+                <Mail className="h-5 w-5 mr-2" />
+                Start a Conversation
+              </a>
             </div>
           </div>
         </div>
@@ -302,3 +217,4 @@ export default function ContactSection() {
     </section>
   );
 }
+

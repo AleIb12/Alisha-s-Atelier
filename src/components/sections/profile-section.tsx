@@ -6,13 +6,13 @@ export default function ProfileSection() {
   const skills = [
     'React', 'Next.js', 'TypeScript', 'JavaScript', 'Java', 'Spring',
     'Node.js', 'PostgreSQL', 'MongoDB', 'Tailwind CSS', 'Figma', 'Git',
-    'Genkit', 'Python', 'Angular', 'Vaadin', 'NoSQL'
+    'Genkit', 'Python', 'Angular', 'Vaadin', 'NoSQL', 'Bootstrap', 'Canva', 'DaVinci Resolve', 'JavaFX'
   ];
 
   const stats = [
     { label: 'Years Experience', value: '1' },
     { label: 'Projects Completed', value: '15+' },
-    { label: 'Technologies', value: '17+' },
+    { label: 'Technologies', value: '21+' },
     { label: 'Client Satisfaction', value: '100%' }
   ];
 
@@ -34,7 +34,8 @@ export default function ProfileSection() {
               </div>
               <p className="text-xl text-muted-foreground leading-relaxed text-balance">
                 I craft beautiful and functional digital experiences with clean code 
-                and thoughtful design. Passionate about creating solutions that make a difference.
+                and thoughtful design. Passionate about creating solutions that make a difference, 
+                with expertise in UI/UX design using Bootstrap, Figma, and Canva, plus video editing with DaVinci Resolve.
               </p>
             </div>
 
