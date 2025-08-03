@@ -6,13 +6,13 @@ export default function ProfileSection() {
   const skills = [
     'React', 'Next.js', 'TypeScript', 'JavaScript', 'Java', 'Spring',
     'Node.js', 'PostgreSQL', 'MongoDB', 'Tailwind CSS', 'Figma', 'Git',
-    'Genkit', 'Python', 'Angular', 'Vaadin', 'NoSQL', 'Bootstrap', 'Canva', 'DaVinci Resolve', 'JavaFX'
+    'Genkit', 'Python', 'Angular', 'Vaadin', 'NoSQL', 'Bootstrap', 'Canva', 'DaVinci Resolve', 'JavaFX', 'Electron'
   ];
 
   const stats = [
     { label: 'Years Experience', value: '1' },
     { label: 'Projects Completed', value: '15+' },
-    { label: 'Technologies', value: '21+' },
+    { label: 'Technologies', value: '22+' },
     { label: 'Client Satisfaction', value: '100%' }
   ];
 
