@@ -110,8 +110,8 @@ export default function ProjectsSection() {
       <div className="section-content">
         {/* Header */}
         <div className="section-header">
-          <h2 className="section-title">Featured Projects</h2>
-          <p className="section-subtitle">
+          <h2 className="font-playfair text-4xl md:text-5xl font-medium text-foreground mb-6 tracking-tight">Featured Projects</h2>
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
             A selection of my recent work showcasing different technologies and approaches
             to solving real-world problems.
           </p>
@@ -119,15 +119,15 @@ export default function ProjectsSection() {
 
         {/* Filter */}
         <div className="flex justify-center mb-16">
-          <div className="flex gap-2 p-1 bg-muted rounded-lg">
+          <div className="flex gap-2 p-1.5 bg-secondary/30 rounded-xl border border-border/50">
             {categories.map((category) => (
               <button
                 key={category.value}
                 onClick={() => setSelectedCategory(category.value)}
-                className={`px-4 py-2 text-sm font-medium rounded-md transition-all duration-200 ${
+                className={`px-5 py-2.5 text-sm font-medium rounded-lg transition-all duration-300 ${
                   selectedCategory === category.value
-                    ? 'bg-background text-foreground shadow-sm'
-                    : 'text-muted-foreground hover:text-foreground'
+                    ? 'bg-primary text-primary-foreground shadow-lg shadow-primary/20'
+                    : 'text-muted-foreground hover:text-foreground hover:bg-background/50'
                 }`}
               >
                 {category.label}

@@ -24,15 +24,15 @@ export default function ProfileSection() {
           <div className="space-y-8">
             {/* Header */}
             <div className="space-y-6">
-              <div className="space-y-2">
-                <p className="text-muted-foreground text-sm font-medium tracking-wide uppercase">
+              <div className="space-y-3">
+                <p className="text-primary text-sm font-semibold tracking-wider uppercase">
                   Full-Stack Developer
                 </p>
-                <h1 className="text-4xl md:text-5xl lg:text-6xl font-medium text-foreground leading-tight tracking-tight">
+                <h1 className="font-playfair text-5xl md:text-6xl lg:text-7xl font-medium text-foreground leading-[1.1] tracking-tight">
                   Hi, I'm Alisha
                 </h1>
               </div>
-              <p className="text-xl text-muted-foreground leading-relaxed text-balance">
+              <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-lg">
                 I craft beautiful and functional digital experiences with clean code 
                 and thoughtful design. Passionate about creating solutions that make a difference, 
                 with expertise in UI/UX design using Bootstrap, Figma, and Canva, plus video editing with DaVinci Resolve.
@@ -88,8 +88,13 @@ export default function ProfileSection() {
           {/* Image */}
           <div className="relative">
             <div className="relative mx-auto w-80 h-80 lg:w-96 lg:h-96">
-              <div className="absolute inset-0 bg-gradient-to-br from-muted to-background rounded-2xl"></div>
-              <div className="relative w-full h-full rounded-2xl overflow-hidden border border-border">
+              {/* Gradient background with new colors */}
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-secondary/10 to-accent/5 rounded-2xl"></div>
+              {/* Decorative elements */}
+              <div className="absolute -top-4 -right-4 w-24 h-24 bg-primary/10 rounded-full blur-xl"></div>
+              <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-secondary/10 rounded-full blur-xl"></div>
+              
+              <div className="relative w-full h-full rounded-2xl overflow-hidden border-2 border-primary/20 shadow-xl shadow-primary/10">
                 <Image
                   src="/images/profile/imagenpro.png"
                   alt="Alisha Ibarra - Full Stack Developer"

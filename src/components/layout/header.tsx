@@ -69,17 +69,17 @@ export default function Header() {
             className="group flex items-center gap-3"
           >
             {/* Logo icon */}
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-foreground to-foreground/80 flex items-center justify-center text-background font-bold text-lg shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-105">
+            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-primary to-primary/80 flex items-center justify-center text-primary-foreground font-bold text-lg shadow-lg shadow-primary/20 group-hover:shadow-xl group-hover:shadow-primary/30 transition-all duration-300 group-hover:scale-105">
               A
             </div>
-            <span className="text-xl font-bold text-foreground group-hover:text-foreground/80 transition-colors duration-300">
+            <span className="font-playfair text-xl font-semibold text-foreground group-hover:text-primary transition-colors duration-300">
               Alisha Ibarra
             </span>
           </Link>
 
           {/* Enhanced Desktop Navigation */}
           <nav className="hidden md:flex items-center">
-            <div className="flex items-center bg-muted/30 backdrop-blur-sm rounded-2xl p-2 border border-border/30 shadow-lg">
+            <div className="flex items-center bg-secondary/20 backdrop-blur-sm rounded-2xl p-2 border border-border/30 shadow-lg shadow-primary/10">
               {navigation.map((item, index) => {
                 const isActive = activeSection === item.href.slice(1);
                 return (
@@ -88,13 +88,13 @@ export default function Header() {
                     onClick={() => scrollToSection(item.href)}
                     className={`relative px-4 py-2.5 text-sm font-semibold rounded-xl transition-all duration-300 ${
                       isActive
-                        ? 'bg-background text-foreground shadow-md border border-border/50'
+                        ? 'bg-primary text-primary-foreground shadow-md shadow-primary/30'
                         : 'text-foreground/60 hover:text-foreground hover:bg-background/50'
                     }`}
                   >
                     {item.name}
                     {isActive && (
-                      <div className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-1 h-1 bg-foreground rounded-full"></div>
+                      <div className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-1 h-1 bg-primary-foreground rounded-full"></div>
                     )}
                   </button>
                 );
@@ -104,7 +104,7 @@ export default function Header() {
             {/* CTA Button */}
             <button
               onClick={() => scrollToSection('#contact')}
-              className="ml-6 px-6 py-2.5 bg-foreground text-background text-sm font-semibold rounded-xl hover:bg-foreground/90 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
+              className="ml-6 px-6 py-2.5 bg-primary text-primary-foreground text-sm font-semibold rounded-xl hover:bg-primary/90 transition-all duration-300 hover:scale-105 shadow-lg shadow-primary/20 hover:shadow-xl hover:shadow-primary/30"
             >
               Let's Talk ✨
             </button>
@@ -113,7 +113,7 @@ export default function Header() {
           {/* Enhanced Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="md:hidden relative p-3 rounded-xl bg-muted/30 backdrop-blur-sm border border-border/30 text-foreground hover:bg-muted/50 transition-all duration-300 hover:scale-105 shadow-lg"
+            className="md:hidden relative p-3 rounded-xl bg-secondary/20 backdrop-blur-sm border border-border/30 text-foreground hover:bg-secondary/30 transition-all duration-300 hover:scale-105 shadow-lg shadow-primary/10"
             aria-label="Toggle menu"
           >
             {isMobileMenuOpen ? (
@@ -137,14 +137,14 @@ export default function Header() {
                       onClick={() => scrollToSection(item.href)}
                       className={`w-full text-left px-4 py-3 text-sm font-semibold rounded-xl transition-all duration-300 flex items-center justify-between group ${
                         isActive
-                          ? 'bg-foreground text-background shadow-md'
-                          : 'text-foreground/70 hover:text-foreground hover:bg-muted/50'
+                          ? 'bg-primary text-primary-foreground shadow-md shadow-primary/30'
+                          : 'text-foreground/70 hover:text-foreground hover:bg-secondary/30'
                       }`}
                       style={{ animationDelay: `${index * 0.1}s` }}
                     >
                       {item.name}
                       <div className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                        isActive ? 'bg-background' : 'bg-transparent group-hover:bg-foreground/30'
+                        isActive ? 'bg-primary-foreground' : 'bg-transparent group-hover:bg-primary/30'
                       }`}></div>
                     </button>
                   );
@@ -155,7 +155,7 @@ export default function Header() {
               <div className="p-2 border-t border-border/50">
                 <button
                   onClick={() => scrollToSection('#contact')}
-                  className="w-full px-4 py-3 bg-foreground text-background text-sm font-semibold rounded-xl hover:bg-foreground/90 transition-all duration-300 flex items-center justify-center gap-2"
+                  className="w-full px-4 py-3 bg-primary text-primary-foreground text-sm font-semibold rounded-xl hover:bg-primary/90 transition-all duration-300 flex items-center justify-center gap-2 shadow-md shadow-primary/20"
                 >
                   Let's Talk ✨
                 </button>
